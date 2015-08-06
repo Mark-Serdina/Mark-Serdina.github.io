@@ -10,206 +10,2083 @@ jquery.mobile-1.0a4.1.min.css" />
 </head>
 <body>
 
-
-<!-- begin first page -->
+<!-- begin first page.-->
 <section id="page1" data-role="page">
-<header data-role="header">
-<h1>jQuery Mobile</h1>
-
-<nav data-role="navbar">
-<ul>
-<li><a href="#" class="ui-btn-active">First</a></li>
-<li><a href="#">Second</a></li>
-<li><a href="#">Third</a></li>
-<li><a href="#">Fourth</a></li>
-<li><a href="#">Fifth</a></li>
-<li><a href="#">Sixth</a></li>
-</ul>
-</nav>
-</header>
-<div data-role="content" class="content">
-<p class="show-menu">Show/Hide Menu</p>
-
-<h3>Buttons</h3>
-<a href="#" data-role="button">Link-based button</a>
-<input type="submit" value="submit" data-inline="true">
-<input type="reset" value="reset" data-inline="true">
-
-<h3>Control Group Buttons</h3>
-<div data-role="controlgroup">
-<a href="#" data-role="button">Yes</a>
-<a href="#" data-role="button">No</a>
-<a href="#" data-role="button">Cancel</a>
+	<header data-role="ui-header">
+		<h1 style="text-align:center">Restaurant App</h1>
+	</header>
+<div data-role="ui-content" class="ui-content">
+	<nav data-role="navbar" class="ui-bar-b button">
+		<ul>
+			<li><a href="#page2"><img src="img/spoons.PNG" alt=""></a></li>
+			<li><a href="#"><img src="img/restaurantnews.PNG" alt=""></a></li>
+			<li><a href="#page5"><img src="img/photo.PNG" alt=""></a></li>
+		</ul>
+		<ul>
+			<li><p style="text-align:center">Menu</p></li>
+			<li><p style="text-align:center">News</p></li>
+			<li><p style="text-align:center">Gallery</p></li>
+		</ul>
+		<br/>
+		<ul>
+			<li><a href="#"><img src="img/contactus.PNG" alt=""></a></li>
+			<li><a href="#"><img src="img/information.PNG" alt=""></a></li>
+			<li><a href="#"><img src="img/location.PNG" alt=""></a></li>
+		</ul>
+		<ul>
+			<li><p style="text-align:center">Contact</p></li>
+			<li><p style="text-align:center">Info</p></li>
+			<li><p style="text-align:center">Location</p></li>
+		</ul>
+	</nav>
 </div>
-<div data-role="controlgroup" data-type="horizontal">
-<a href="#" data-role="button">Yes</a>
-<a href="#" data-role="button">No</a>
-<a href="#" data-role="button">Cancel</a>
-</div>
-
-<!--icons-->
-<h3>Button Icons</h3>
-<div data-role="controlgroup" data-type="horizontal" data-inline="true">
-<a href="#" data-role="button" data-icon="home" data-iconpos="left">Home</a>
-<a href="#" data-role="button" data-icon="gear"
-data-iconpos="left">Configure</a>
-<a href="#" data-role="button" data-icon="search"
-data-iconpos="left">Search</a>
-</div>
-
-
-
-<h3>Unordered List</h3>
-<ul data-role="listview">
-<li data-role="divider">Things</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li data-role="divider">Stuff</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li data-role="divider">Miscellaneous</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-</ul>
-<h3>Ordered List</h3>
-<ol data-role="listview">
-<li data-role="divider">Group</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li data-role="divider">Group</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li data-role="divider">Group</li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-<li><a href="#">Item</a></li>
-</ol>
-
-<h3>Nested List Example</h3>
-
-<ul data-role="listview">
-<li data-role="divider">Items<span class="ui-li-count">10</span></li>
-<li><a href="#">Restaurants</a><span class="ui-li-count">9</span>
-<ul>
-<li>
-<a href="#">
-<img src="french.PNG"
-alt="French flag icon"
-class="ui-li-icon" width="20">
-French
-<span class="ui-li-count">3</span>
-</a>
-<ul>
-<li>
-<a href="lecentral.html">
-<img src="../images/logo-generic.png" alt="Le Central logo">
-Le Central
-</a>
-<span class="ui-li-count">9</span>
-<a href="reservations.php?restaurant=403">Make Reservations</a>
-</li>
-<li>
-<a href="bistrovandome.html">
-<img src="../images/logo-generic.png" alt="Bistro Vandome logo">
-Bistro Vandome
-</a>
-<a href="reservations.php?restaurant=404">Make Reservations</a>
-</li>
-<li>
-<a href="antoines.html">
-<img src="../images/logo-generic.png" alt="Antoine's logo">
-Antoine's
-</a>
-<a href="reservations.php?restaurant=405">Make Reservations</a>
-</li>
-</ul>
-</li>
-<li>
-<a href="#">
-<img src="Cajun.PNG"
-alt="Cajun icon"
-class="ui-li-icon" width="20">
-Cajun
-<span class="ui-li-count">3</span>
-</a>
-<ul>
-<li>Bayou Bob's</li>
-<li>Pappadeaux</li>
-<li>Lucile's</li>
-</ul>
-</li>
-<li>
-<a href="#">
-<img src="America.PNG"
-alt="American flag icon"
-class="ui-li-icon" width="20">
-American
-<span class="ui-li-count">3</span>
-</a>
-<ul>
-<li>Dixon's</li>
-<li>Vesta Dipping Grill</li>
-<li>Steuben's</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-<div class="sliding-menu slide out">Menu</div>
-</div>
-<footer data-role="footer">
-<h2>jQuery Mobile</h2>
+<footer data-role="ui-footer">
+	<p style="text-align:center"> Copyright &copy; 2015 Mark Serdina</p>
+	<p style="text-align:center">SIT313 Mobile Computing</p>
+		<p style="text-align:center">Deakin University</p>
 </footer>
 </section>
-<!-- end first page -->
+<!-- End first page.-->
 
-
-<script>
-// Initialize the list view
-$("ul.twitter-feed").listview();
-var updateTweets = function() {
-// Go get more tweets and prepend them to the list and then
-// refresh the list view.
-var strNewTweetsHtml = getNewTweets();
-$("ul.twitter-feed").prepend(strNewTweetsHtml).listview("refresh");
-}
-</script>
-
-<!-- Begin second page -->
+<!--Start restaurant menu.-->
 <section id="page2" data-role="page">
-<header data-role="header">
-<h1>jqmTwit: Settings</h1>
-</header>
-<div data-role="content" class="content">
-<p>Settings go here.</p>
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Menu</strong><br><br>
+			Appetizer
+			<ul>
+				<li><a href="#page2.1"><img src="img/garlicbread.PNG" height="150" width="300"
+					style="width:100%;"></a>
+				</li>
+			</ul>
+			Main dish
+			<ul>
+				<li><a href="#page3.1"><img src="img/bbq.PNG" height="150" width="300"
+					style="width:100%;"></a>
+				</li>
+			</ul>
+			Salad
+			<ul>
+				<li><a href="#page4.1"><img src="img/greeksalad.PNG" height="150" width="300"
+					style="width:100%;"></a>
+				</li>
+			</ul>
+			Pizza
+			<ul>
+				<li><a href="#page5.1"><img src="img/itallianpizza.PNG" height="150" width="300"
+					style="width:100%;"></a>
+				</li>
+			</ul>
+			Dessert
+			<ul>
+				<li><a href="#page6.1"><img src="img/yumydessert.PNG" height="150" width="300"
+					style="width:100%;"></a>
+				</li>
+			</ul>
+			Drinks
+			<ul>
+				<li><a href="#page7.1"><img src="img/drinks.PNG" height="150" width="300"
+					style="width:100%;">
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End restaurant menu.-->
+
+<!--Start for appetizer menu.-->
+<section id="page2.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Appetizer</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/appettizer1.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					1. Artichoke Bruschetta<br>Price: $8<a href="#page2.1.1">View Recipe</a>
+					<a href="#page2.1.1.1">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/garlicbread.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					2. Garlic Bread<br><br>Price: $5<a href="#page2.1.2">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/rumaki.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					3. Rumaki with Pineapple<br>Price: $10<a href="#page2.1.3">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/chickenwings.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					4. Chicken Wings<br>Price: $11<a href="#page2.1.4">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/vegsamosa.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					5. Vegetable Samosa<br>Price: $6<a href="#page2.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/musselsseafood.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					6. Seafood Mussels<br>Price: $10<a href="#page2.1.6">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/prawnsaganaki.PNG" height="110" width="120"
+					style="width:100%;"></a></li>
+				<li>
+					7. Prawn Saganaki<br>Price: $7<a href="#page2.1.7">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for appetizer menu.-->
+
+<!--Start for main dish menu.-->
+<section id="page3.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Main Dish</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/lasagna.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					1. Best Lasagna<br><br>Price: $11<a href="#page3.1.1">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/bbq.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					2. bbq ribs<br><br>Price: $18<a href="#page3.1.2">View Recipe</a>
+					<a href="#">Order Now
+				</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/shrimpverde.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					3. Shrimp Verde<br><br>Price: $15<a href="#page3.1.3">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/chickensoup.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					4. Chicken Soup<br><br>Price: $11<a href="#page3.1.4">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/Ribeyesteak.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					5. Rib-eye steak<br><br>Price: $20<a href="#page3.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for main dish menu.-->
+
+<!--Start for salad menu.-->
+<section id="page4.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Salad</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/craneberryspinachesalad.PNG" height="110" 
+					width="120" style="width:100%;"></a>
+				</li>
+				<li>
+					1. Crane-berry spinache salad<br>Price: $8<a href="#page4.1.1">View Recipe
+					</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/greeksalad.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					2. Greek salad<br><br>Price: $8<a href="#page4.1.2">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/gardensalad.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					3. Garden salad<br><br>Price: $8<a href="#page4.1.3">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/italiansalad.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					4. Spicy Italian salad<br><br>Price: $8<a href="#page4.1.4">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/potatosalad.PNG" height="110" width="120"
+				 	style="width:100%;"></a>
+				</li>
+				<li>
+					5. Potato salad<br><br>Price: $8<a href="#page4.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for salad menu.-->
+
+<!--Start for Pizza menu.-->
+<section id="page5.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Pizza</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/meatloverspizza.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					1. Meat Lovers<br><br>Price: $12<a href="#page5.1.1">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/hawaiianpizza.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					2. Haiwaiian<br><br>Price: $12<a href="#page5.1.2">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/americanopizza.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					3. Americano<br><br>Price: $12<a href="#page5.1.3">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/margaritapizza.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					4. Margarita<br><br>Price: $12<a href="#page5.1.4">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/supremepizza.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					5. Supreme <br><br>Price: $12<a href="#page5.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for Pizza menu.-->
+
+<!--Start for dessert menu.-->
+<section id="page6.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Dessert</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/healthysundae.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					1. Healthy sundae<br><br>Price: $6<a href="#page6.1.1">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/strawberrysmootthies.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					2. Strawberry smoothies<br>Price: $6<a href="#page6.1.2">View Recipe</a><a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/stewedquincedessert.PNG" height="110" width="120"
+					style="width:100%;"></a>
+				</li>
+				<li>
+					3. Stewed quince dessert<br>Price: $7<a href="#page6.1.3">View Recipe</a><a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/mangodessert.PNG" height="110" width="120" 
+					style="width:100%;"></a>
+				</li>
+				<li>
+					4. Mango dessert<br><br>Price: $5<a href="#page6.1.4">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/mangoicecream.PNG" height="110" width="120" 
+					style="width:100%;"></a>
+				</li>
+				<li>
+					5. Mango ice cream<br>Price: $7<a href="#page6.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for dessert menu.-->
+
+<!--Start of drinks menu.-->
+<section id="page7.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">
+			<strong><img src="img/spoons.PNG" alt="" width="30">Liquor</strong><br><br>
+			
+			<ul>
+				<li><a href="#"><img src="img/bloddymarydrink.PNG" height="110" width="120" style="width:100%;"></a>
+				</li>
+				<li>
+					1. Bloody mary<br><br>Price: $10<a href="#page7.1.1">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/vodka.PNG" height="110" width="120" 	 style="width:100%;"></a>
+				</li>
+				<li>
+					2. Vodka<br><br>Price: $10<a href="#page7.1.2">View Recipe</a><a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/sangria.PNG" height="110" width="120" 	 style="width:100%;"></a>
+				</li>
+				<li>
+					3. Sangria<br><br>Price: $10<a href="#page7.1.3">View Recipe</a><a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/ginmartini.PNG" height="110" width="120" style="	width:100%;"></a>
+				</li>
+				<li>
+					4. Gin martini<br><br>Price: $10<a href="#page7.1.4">View Recipe</a><a href="#">Order Now</a>
+				</li>
+			</ul>
+			<br>
+			<ul>
+				<li><a href="#"><img src="img/virgincocumbermojito.PNG" height="110" width="120" style="width:100%;"></a>
+				</li>
+				<li>
+					5. Virgin cocumber mojito<br>Price: $10<a href="#page7.1.5">View Recipe</a>
+					<a href="#">Order Now</a>
+				</li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End for drinks menu.-->
+
+<!--Start of appetizer recipes .-->
+<!--Start recipe for Artichoke Bruschetta.-->
+<section id="page2.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/appettizer1.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 (6.5 ounce) jar marinated artichoke hearts, drained and chopped.</p>
+				</li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup grated Romano cheese.</p></li>
+			</ul>
+			<ul>
+				<li><p>5 tablespoons mayonnaise.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 French baguette, cut into 1/3 inch thick slices. </p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for Artichoke Bruschetta.-->
+
+<!--Start recipe for Garlic Bread.-->
+<section id="page2.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/garlicbread.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 3 heads garlic. </p></li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 (1 pound) loaf Italian bread.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup butter. </p></li>
+			</ul>
+			<ul>
+				<li><p>1 tablespoon chopped fresh parsley(optional).</p></li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons grated Parmesan cheese(optional). </p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for Garlic Bread.-->
+
+<!--Start recipe for Rumaki with Pineapple.-->
+<section id="page2.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/rumaki.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>cooking spray.</p></li>
+			</ul>
+			<ul>
+				<li><p>24 water chestnut slices.</p></li>
+			</ul>
+			<ul>
+				<li><p> 8 thick-cut bacon slices, cut crosswise into 3 pieces. </p></li>
+			</ul>
+			<ul>
+				<li><p>24 toothpicks.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup low-fat sesame-ginger salad dressing. <p></li>
+			</ul>
+			<ul>
+				<li><p> 1 tablespoon chopped green onion, or to taste.  </p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for Rumaki with Pineapple.-->
+
+<!--Start recipe for chicken wings.-->
+<section id="page2.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/chickenwings.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons vegetable oil,  1 tablespoon kosher salt. </p></li>
+			</ul>
+			<ul>
+				<li><p>1 teaspoon ground black pepper. </p></li>
+			</ul>
+			<ul>
+				<li><p> 5 pounds chicken wings.  </p></li>
+			</ul>
+			<ul>
+				<li><p>1/4 cup jalapeno pepper jelly.</p></li>
+			</ul>
+			<ul>
+				<li><p>  1/4 cup seasoned rice vinegar. <p></li>
+			</ul>
+			<ul>
+				<li><p>  2 tablespoons soy sauce, 4 cloves garlic, crushed.  </p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for chicken wings.-->
+
+<!--Start recipe for Vegetable samosa.-->
+<section id="page2.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/vegsamosa.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons vegetable oil.</p></li>
+			</ul>
+			<ul>
+				<li><p>4 medium potatoes, peeled and cut into 1/2-inch cubes.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup chopped yellow onion.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 cup canned peas and carrots, drained.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup Kikkoman Thai Red Curry Sauce.<p></li>
+			</ul>
+			<ul>
+				<li><p>Flour for baking sheet.</p></li>
+			</ul>
+			<ul>
+				<li><p>12 large wonton wrappers.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for vegetable samosa.-->
+
+<!--Start recipe for seafood mussels-->
+<section id="page2.1.6" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/musselsseafood.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>3/4 cup white wine.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 cup tomato and clam juice cocktail.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 cloves garlic - peeled and sliced.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 teaspoon crushed red pepper flakes.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 pound mussels, cleaned and debearded.<p></li>
+			</ul>
+			<ul>
+				<li><p>3 tablespoons butter.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for seafood mussels.-->
+
+<!--Start recipe for prawn saganaki-->
+<section id="page2.1.7" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/prawnsaganaki.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 tablespoon olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 red onion, halved and thinly sliced.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 cloves garlic, thinly sliced.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons tomato paste.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup white wine.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 (13.5 ounce) jar tomato and olive pasta sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 1/2 pounds prawns, peeled and deveined, tail on.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup crumbled Greek feta cheese.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons chopped fresh flat-leaf parsley.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for prawn saganaki.-->
+<!--End of appetizer recipes .-->
+
+<!--Start of main dish recipe-->
+<!--Start recipe for lasagna-->
+<section id="page3.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/lasagna.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 pound sweet Italian sausage.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 pound lean ground beef.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup minced onion.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 cloves garlic, crushed.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 (28 ounce) can crushed tomatoes.<p></li>
+			</ul>
+			<ul>
+				<li><p>2 (6 ounce) cans tomato paste.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 (6.5 ounce) cans canned tomato sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup water.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons white sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 1/2 teaspoons dried basil leaves.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 teaspoon fennel seeds.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 teaspoon Italian seasoning.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tablespoon salt.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/4 teaspoon ground black pepper.</p></li>
+			</ul>
+			<ul>
+				<li><p>4 tablespoons chopped fresh parsley.</p></li>
+			</ul>
+			<ul>
+				<li><p>12 lasagna noodles.</p></li>
+			</ul>
+			<ul>
+				<li><p>16 ounces ricotta cheese.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 egg.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 teaspoon salt.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 pound mozzarella cheese, sliced.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 cup grated Parmesan cheese.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for lasagna.-->
+
+<!--Start recipe for bbq ribs-->
+<section id="page3.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/bbq.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 1 small onion, chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 7 cloves garlic.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup vinegar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup soy sauce.<p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons chopped fresh rosemary.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons Dijon-style prepared mustard.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 teaspoons salt.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 teaspoon black pepper.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 (2 pound) ribs.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for bbq ribs.-->
+
+<!--Start recipe for shrimp verde.-->
+<section id="page3.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/shrimpverde.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 cloves garlic, chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/4 cup chopped green onion.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 pound fresh shrimp, peeled and deveined.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup Italian flat leaf parsley, chopped.<p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup freshly grated Parmesan cheese.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for shrimp verde.-->
+
+<!--Start recipe for chicken soup.-->
+<section id="page3.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/chickensoup.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 boneless chicken breast half, cooked and diced.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 cups water.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 carrots, chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 zucchini, diced.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 clove garlic, minced.<p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 teaspoon chicken broth base.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for chicken soup.-->
+
+<!--Start recipe for rib eye steak.-->
+<section id="page3.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/Ribeyesteak.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons soy sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons water.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 tablespoon white sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 1/2 teaspoons Worcestershire sauce 1 1/4 teaspoons distilled white vinegar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 1/4 teaspoons distilled white vinegar.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 teaspoon olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 teaspoon onion powder.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 teaspoon garlic powder.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/8 teaspoon ground ginger.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 (6 ounce) lean beef rib eye steaks.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for rib eye steak.-->
+<!--End of main dish recipes.-->
+
+<!--Start of salad recipes.-->
+<!--Start recipe for crane-berry spinache salad.-->
+<section id="page4.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/craneberryspinachesalad.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 1 tablespoon butter.</p></li>
+			</ul>
+			<ul>
+				<li><p> 3/4 cup almonds, blanched and slivered.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 pound spinach, rinsed and torn into bite-size pieces.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cup dried cranberries.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons toasted sesame seeds.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 tablespoon poppy seeds.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup white sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 teaspoons minced onion.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 teaspoon paprika.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup white wine vinegar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup cider vinegar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup vegetable oil.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for crane-berry spinache salad.-->
+
+<!--Start recipe for Greek salad.-->
+<section id="page4.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/greeksalad.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 3 large ripe tomatoes, chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 cucumbers, peeled and chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 small red onion, chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 4 teaspoons lemon juice.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 1/2 teaspoons dried oregano.</p></li>
+			</ul>
+			<ul>
+				<li><p> salt and pepper to taste.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cup crumbled feta cheese.</p></li>
+			</ul>
+			<ul>
+				<li><p> 6 black Greek olives, pitted and sliced.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for Greek salad.-->
+
+<!--Start recipe for garden salad.-->
+<section id="page4.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/gardensalad.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 150g baby rocket.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 avocado, peeled, diced.</p></li>
+			</ul>
+			<ul>
+				<li><p> 100g cherry tomatoes, halved.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/3 cup (80ml) olive oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons balsamic vinegar.<p></li>
+			</ul>
+			<ul>
+				<li><p>1 bunch of lettuce.<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for garden salad.-->
+
+<!--Start recipe for Italian salad.-->
+<section id="page4.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/italiansalad.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup canola oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/3 cup tarragon vinegar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 tablespoon white sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 teaspoon chopped fresh thyme.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 teaspoon dry mustard.<p></li>
+			</ul>
+			<ul>
+				<li><p> 2 cloves garlic, minced.<p></li>
+			</ul>
+			</ul>
+			<ul>
+				<li><p> 1 (8 ounce) can artichoke hearts, drained and quartered.</p></li>
+			</ul>
+			<ul>
+				<li><p> 5 cups romaine lettuce - rinsed, dried, and chopped.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 red bell pepper, cut into strips.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 carrot, grated.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 carrot, grated.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup black olives.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup pitted green olives.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cucumber, sliced.<p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons grated Romano cheese.<p></li>
+			</ul>
+			<ul>
+				<li><p> ground black pepper to taste.<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for Italian salad.-->
+
+
+<!--Start recipe for potato salad.-->
+<section id="page4.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/potatosalad.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>3 medium baking potatoes, peeled.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 medium carrots, peeled.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup pineapple, diced.</p></li>
+			</ul>
+			<ul>
+				<li><p>3/4 cups light mayonnaise.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 teaspoon garlic powder.<p></li>
+			</ul>
+			<ul>
+				<li><p>1 teaspoon granulated white sugar.<p></li>
+			</ul>
+			<ul>
+				<li><p>Salt and ground black pepper to taste.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for potato salad.-->
+<!--End of salad recipes.-->
+
+<!--Start of pizza recipes.-->
+<!--Start recipe for meat lovers pizza.-->
+<section id="page5.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/meatloverspizza.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> olive oil cooking spray.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 lean beef sausages.</p></li>
+			</ul>
+			<ul>
+				<li><p> 26cm frozen pizza base, thawed.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup barbecue sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 small red onion, halved, thinly sliced.<p></li>
+			</ul>
+			<ul>
+				<li><p> 50g 97% fat-free rindless bacon, chopped.<p></li>
+			</ul>
+			<ul>
+				<li><p> 60g shaved pastrami, roughly chopped.</p></li>
+			</ul>
+			<ul>
+				<li><p> 6 cherry tomatoes, quartered.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup grated reduced-fat pizza cheese.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for meat lovers pizza.-->
+
+<!--Start recipe hawaiian pizza.-->
+<section id="page5.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/hawaiianpizza.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup (127g) pizza sauce, or more depending how much you lik.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 and 1/2 cups (6oz or 168g) shredded mozzarella chees.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup (75g) cooked ham or Canadian bacon, sliced or choppe.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup (82g) pineapple chunks (canned or fresh.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 slices bacon, cooked and crumble.<p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 recipe pizza crust 1.<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for hawaiian pizza.-->
+
+<!--Start recipe americano pizza.-->
+<section id="page5.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/americanopizza.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>recipe Thin Crust Pizza Dough.</p></li>
+			</ul>
+			<ul>
+				<li><p>cup pizza sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 1/2 ounce package pizza-style Canadian-style bacon or thinly sliced, cooked turkey pepperoni.</p></li>
+			</ul>
+			<ul>
+				<li><p>cups thinly sliced fresh mushrooms.</p></li>
+			</ul>
+			<ul>
+				<li><p>cup shredded reduced-fat mozzarella and/or 4-cheese Italian blend cheese.<p></li>
+			</ul>
+			<ul>
+				<li><p>tablespoons thinly sliced green onion.<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for americano pizza.-->
+
+<!--Start recipe margarita pizza.-->
+<section id="page5.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/margaritapizza.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>300g strong bread flour.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp instant yeast (from a sachet or a tub).</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp salt.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tbsp olive oil, plus extra for drizzling.</p></li>
+			</ul>
+			<ul>
+				<li><p>100ml passata.<p></li>
+			</ul>
+			<ul>
+				<li><p>handful fresh basil or 1 tsp dried.<p></li>
+			</ul>
+			<ul>
+				<li><p>1 garlic clove, crushed.<p></li>
+			</ul>
+			<ul>
+				<li><p>125g ball mozzarella, sliced handful grated or shaved parmesan.<p></li>
+			</ul>
+			<ul>
+				<li><p>handful cherry tomatoes, halved.<p></li>
+			</ul>
+			<ul>
+				<li><p>handful basil leaves (optional).<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for margarita pizza.-->
+
+<!--Start recipe supreme pizza.-->
+<section id="page5.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/supremepizza.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 1 package (1/4 ounce) active dry yeast.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 cups warm water (110° to 115°).</p></li>
+			</ul>
+			<ul>
+				<li><p> 3 tablespoons vegetable oil.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1-1/2 teaspoons salt.</p></li>
+			</ul>
+			<ul>
+				<li><p> 4 to 6 cups all-purpose flour.<p></li>
+			</ul>
+			<ul>
+				<li><p> 2 cans (8 ounces each) tomato sauce.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1-1/2 teaspoons grated onion.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 teaspoon dried oregano.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 teaspoon salt.<p></li>
+			</ul>
+			<ul>
+				<li><p> 4 cups (16 ounces) shredded part-skim mozzarella cheese.<p></li>
+			</ul>
+			<ul>
+				<li><p> 4 ounces Canadian bacon, diced.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 package (3-1/2 ounces) sliced pepperoni.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 medium sweet red pepper, sliced.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 medium green pepper, sliced.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 can (2-1/4 ounces) sliced ripe olives, drained.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cup chopped onion.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cup grated Parmesan cheese.<p></li>
+			</ul>
+			<ul>
+				<li><p> 1/2 cup minced fresh basil.<p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe for supreme pizza.-->
+<!--End of pizza recipes.-->
+
+<!--Start of dessert recipes.-->
+<!--Start recipe of healthy sundae.-->
+<section id="page6.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/healthysundae.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 4 oz Greek yogurt with Strawberry on the bottom (around 100 calories or less).</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 oz chopped nuts.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of healthy sundae.-->
+
+<!--Start recipe of strawberry smoothies.-->
+<section id="page6.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/strawberrysmootthies.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>3 strawberries.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup seedless watermelon.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 basil leaves.</p></li>
+			</ul>
+			<ul>
+				<li><p>8 ounces coconut water.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp. of lemon juice.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp. of Agave syrup.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup ice.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of strawberry smoothies.-->
+
+<!--Start recipe of stewed quince dessert.-->
+<section id="page6.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/stewedquincedessert.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>3 quinces.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 tbsp grapeseed oil.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tbsp rice flour, mixed with 50 ml of water.</p></li>
+			</ul>
+			<ul>
+				<li><p>50g sucanat or brown sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p>½ tbsp cinnamon.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp ground cloves.</p></li>
+			</ul>
+			<ul>
+				<li><p>3 tbsp raisins.</p></li>
+			</ul>
+			<ul>
+				<li><p>½ tsp vanilla extract.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 tsp rum extract.</p></li>
+			</ul>
+			<ul>
+				<li><p>pinch of sea salt.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of stewed quince dessert.-->
+
+<!--Start recipe of mango dessert.-->
+<section id="page6.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/mangodessert.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 mango half lemon lemon balsamic vinegar sauce grapes, lemon slices and mint leaves for garnish.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of mango dessert dessert.-->
+
+<!--Start recipe of mango ice cream dessert.-->
+<section id="page6.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/mangoicecream.PNG" height="200" width="270"
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1/2 plus 1/4 cup granulated sugar.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 cups fresh mango pieces.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 tablespoons fresh lime juice.</p></li>
+			</ul>
+			<ul>
+				<li><p>eggs.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup coconut milk.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 1/2 cups half and half.</p></li>
+			</ul>
+			<ul>
+				<li><p>2 - 3 tablespoons of toasted coconut as garnish (optional).</p></li>
+			</ul>
+			<ul>
+				<li><p>Handful of mint sprigs as garnish.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of mango ice cream dessert.-->
+<!--End of dessert recipes.-->
+
+<!--Start of drinks recipes.-->
+<!--Start recipe of bloddy mary drink.-->
+<section id="page7.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/bloddymarydrink.PNG" height="200" width="270" 
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>2 parts Grey Goose vodka.</p></li>
+			</ul>
+			<ul>
+				<li><p>4 parts organic tomato juice.</p></li>
+			</ul>
+			<ul>
+				<li><p>½ part fresh lemon juice.</p></li>
+			</ul>
+			<ul>
+				<li><p>4 dashes of Worcestershire sauce.</p></li>
+			</ul>
+			<ul>
+				<li><p>4 dashes of Tabasco (or hot pepper sauce).</p></li>
+			</ul>
+			<ul>
+				<li><p>Pinch of fleur de sel (or sea salt).</p></li>
+			</ul>
+			<ul>
+				<li><p>Pinch of black pepper.</p></li>
+			</ul>
+			<ul>
+				<li><p>Some cubed ice.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of bloddy mary drink.-->
+
+<!--Start recipe of vodka drink.-->
+<section id="page7.1.2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/vodka.PNG" height="200" width="270" 
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p> 250ml vodka.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1L guava juice.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1L dry ginger ale.</p></li>
+			</ul>
+			<ul>
+				<li><p> 2 tablespoons lime.</p></li>
+			</ul>
+			<ul>
+				<li><p> Angostura bitters.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1/4 cup whole mint leaves.</p></li>
+			</ul>
+			<ul>
+				<li><p> ice cubes to .</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of vodka drink.-->
+
+
+<!--Start recipe of sangria drink.-->
+<section id="page7.1.3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/sangria.PNG" height="200" width="270" 
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 cup cherries, pitted and halved.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup blueberries.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup raspberries.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup quartered small strawberries.</p></li>
+			</ul>
+			<ul>
+				<li><p>1/2 cup chopped nectarine (about 1).</p></li>
+			</ul>
+			<ul>
+				<li><p>1/3 cup brandy.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 cup apricot nectar, chilled.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 (750-milliliter) bottle cava, chilled.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of sangria drink.-->
+
+<!--Start recipe of vodka drink.-->
+<section id="page7.1.4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/ginmartini.PNG" height="200" width="270" 
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>2 ounces dry gin.</p></li>
+			</ul>
+			<ul>
+				<li><p>1 ounce dry vermouth.</p></li>
+			</ul>
+			<ul>
+				<li><p>Ice.</p></li>
+			</ul>
+			<ul>
+				<li><p>Olives or a twist of lemon, for garnish.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of vodka drink.-->
+
+
+<!--Start recipe of virgin cocumber mojito drink.-->
+<section id="page7.1.5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+	<div data-role="ui-content" class="ui-content">
+		<nav data-role="navbar" class="ui-bar-b button">	
+			<ul>
+				<li><img src="img/virgincocumbermojito.PNG" height="200" width="270" 
+					style="width:100%;">
+				</li>
+			</ul>
+			<ul>
+				<li><p>1 individual packet Mojito-flavored dry beverage mix.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cups cold water.</p></li>
+			</ul>
+			<ul>
+				<li><p> 1 cucumber, peeled and sliced.</p></li>
+			</ul>
+			<ul>
+				<li><p> 3 cups ice cubes.</p></li>
+			</ul>
+		</nav>
+	</div>
+	<footer data-role="ui-footer">
+	</footer>
+</section>
+<!--End recipe of virgin cocumber mojito drink.-->
+<!--End of drinks recipes.-->
+
+
+<section id="page2.1.1.1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="ui-bar-b button">	
+				<h3>Order option</h3>
+				<form id="myform" action="formprocessor.php" method="post">
+					<div data-role="fieldcontain">
+						<label for="How-many">How many serving?</label>
+							<select id="select-quantity1" name="select-quantity1">
+								<option value="">1</option>
+								<option value="">2</option>
+								<option value="">3</option>
+								<option value="">4</option>
+								<option value="">5</option>
+								<option value="">6</option>
+								<option value="">7</option>
+								<option value="">8</option>
+								<option value="">9</option>
+								<option value="">10</option>
+						</select>
+						<select id="select-size1" name="select-size1">
+								<option selected="selected" value="">Select Your Size</option>
+								<option value="">small $8</option>
+								<option value="">Large $12</option>
+						</select>
+					</div>
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1>O'Reilly</h1></footer>
+</section>
+
+
+
+
+
+
+<!--  page -->
+<section id="page3" data-role="page">
+<div data-role="ui-content" class="ui-content">
+	<h3 style="text-align:center">Menu</h3>
+<ul data-role="listview">
+	
+	<li>Main dish
+		<ul>
+			<li>French
+				<ul>
+					<li>Le Central</li>
+					<li>Bistro Vandome</li>
+					<li>Antoine's</li>
+				</ul>
+			</li>
+			<li>Cajun and Creole
+				<ul>
+					<li>Bayou Bob's</li>
+					<li>Pappadeaux</li>
+					<li>Lucile's</li>
+				</ul>
+			</li>
+			<li>American
+				<ul>
+					<li>Dixon's</li>
+					<li>Vesta Dipping Grill</li>
+					<li>Steuben's</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br/>
+<br/>
+
+<ul data-role="listview">
+	<p>Salad</p>
+	<li><img src="img/maindish.PNG" width="1000">
+		<ul>
+			<li>French
+				<ul>
+					<li>Le Central</li>
+					<li>Bistro Vandome</li>
+					<li>Antoine's</li>
+				</ul>
+			</li>
+			<li>Cajun and Creole
+				<ul>
+					<li>Bayou Bob's</li>
+					<li>Pappadeaux</li>
+					<li>Lucile's</li>
+				</ul>
+			</li>
+			<li>American
+				<ul>
+					<li>Dixon's</li>
+					<li>Vesta Dipping Grill</li>
+					<li>Steuben's</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br/>
+<ul data-role="listview">
+	<li>Pizza
+		<ul>
+			<li>French
+				<ul>
+					<li>Le Central</li>
+					<li>Bistro Vandome</li>
+					<li>Antoine's</li>
+				</ul>
+			</li>
+			<li>Cajun and Creole
+				<ul>
+					<li>Bayou Bob's</li>
+					<li>Pappadeaux</li>
+					<li>Lucile's</li>
+				</ul>
+			</li>
+			<li>American
+				<ul>
+					<li>Dixon's</li>
+					<li>Vesta Dipping Grill</li>
+					<li>Steuben's</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<br/>
+<ul data-role="listview">
+	<li>Dessert
+		<ul>
+			<li>French
+				<ul>
+					<li>Le Central</li>
+					<li>Bistro Vandome</li>
+					<li>Antoine's</li>
+				</ul>
+			</li>
+			<li>Cajun and Creole
+				<ul>
+					<li>Bayou Bob's</li>
+					<li>Pappadeaux</li>
+					<li>Lucile's</li>
+				</ul>
+			</li>
+			<li>American
+				<ul>
+					<li>Dixon's</li>
+					<li>Vesta Dipping Grill</li>
+					<li>Steuben's</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
 </div>
-<footer data-role="footer">
-<h2>Because the world needed another Twitter app.</h2>
+<footer data-role="ui-footer">
 </footer>
 </section>
-<!-- end second page -->
 
 
-
-<!-- begin third page -->
-<section id="page3" data-role="page">
-<header data-role="header"><h1>jQuery Mobile</h1></header>
-<div data-role="content" class="content">
-<p>Third page!</p>
-<p><a href="external.html">Go to external page</a></p>
+<section id="page5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+<div data-role="ui-content" class="ui-content">
+	<nav data-role="navbar" class="ui-bar-b button">
+		<strong><img src="img/photo.PNG" alt="" width="30">Gallery</strong><br><br>
+		<ul>
+			<li><a href="" ><img src="img/restaurantInterior3.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior1.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior2.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior4.PNG" alt="" width="100" height="80"></a></li>
+		</ul>
+			<ul>
+			<li><a><img src="img/restaurantInterior5.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior6.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior7.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantInterior8.PNG" alt="" width="100" height="80"></a></li>
+		</ul>
+		</ul>
+			<ul>
+			<li><a><img src="img/restaurantVeranda5.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantbar.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantriverview.PNG" alt="" width="100" height="80"></a></li>
+			<li><a><img src="img/restaurantEntrance.PNG" alt="" width="100" height="80"></a></li>
+		</ul>
+	</nav>
 </div>
-<footer data-role="footer"><h1>O'Reilly</h1></footer>
+<footer data-role="ui-footer">
+</footer>
 </section>
-<!-- end third page -->
-
-<!--http://www.deakin.edu.au/~mserdina/sit313/jquery-mobile1.html-->
-
 </body>
 </html>
