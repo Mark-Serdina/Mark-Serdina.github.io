@@ -1891,7 +1891,7 @@
 <!--End recipe of virgin cocumber mojito drink.-->
 <!--End of drinks recipes.-->
 
-
+<!--Start order option.-->
 <section id="page2.1.1.1" data-role="page">
 	<header data-role="header">
 		<h1 style="text-align:center">Restaurant</h1>
@@ -1919,19 +1919,77 @@
 						<select id="select-size1" name="select-size1">
 								<option value="">Small $8</option>
 								<option value="">Large $12</option>
-						</select>
-						
-
+					</select>
 					</div>
 					<a><span><img src="img/shopping-cart.png" width="" height=""> Add</span></a>
 					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
-					<a href="#" data-role="button" data-icon="">Pay Now</a>
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
 				</form>
 			</nav>
 		</div>
 	<footer data-role="ui-footer"><h1></h1></footer>
 </section>
+<!--End order option.-->	
 
+<!--Start pay now.-->
+<section id="pagepaynow1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="ui-bar-b button">	
+				<h3>Enter Payment details</h3>
+				<form id="myform" action="formprocessor.php" method="post">
+					<div data-role="fieldcontain">
+						<label for="">Enter Card Name:</label><br>
+						<input name="cardname" value="" type="text" size="100%"><br><br>
+						<label for="">Enter Card Number:</label><br>
+						<input name="cardname" value="" type="text" size="100%"><br><br>
+						<label for="">Enter Code: <a href="#">(what is this?)</a></label><br>
+						<input name="cardname" value="" type="text" size="100%"><br><br>
+						<label for="">Month expired:</label><br>
+							<select id="expiry" name="expiry">
+								<option value="">01Jan</option>
+								<option value="">02Feb</option>
+								<option value="">03Mar</option>
+								<option value="">04Apr</option>
+								<option value="">05May</option>
+								<option value="">06Jun</option>
+								<option value="">07Jul</option>
+								<option value="">08Aug</option>
+								<option value="">09Sep</option>
+								<option value="">10Oct</option>
+								<option value="">11Nov</option>
+								<option value="">12Dec</option>
+						</select><br><br>
+						<label for="">Year expired:</label><br>
+						<select id="expiry" name="expiry">
+								<option value="">2015</option>
+								<option value="">2016</option>
+								<option value="">2017</option>
+								<option value="">2018</option>
+								<option value="">2019</option>
+								<option value="">2020</option>
+								<option value="">2021</option>
+								<option value="">2022</option>
+								<option value="">2023</option>
+								<option value="">2024</option>
+								<option value="">2025</option>
+								<option value="">2026</option>
+								<option value="">2027</option>
+								<option value="">2028</option>
+								<option value="">2029</option>
+								<option value="">2030</option>
+						</select><br><br>
+							<input name="submit" value="Submit Payment" type="submit" size="100%"><br><br>
+						<br>
+					</div>
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End pay now.-->
 
 
 
