@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <title>jQuery Mobile Application</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/
-jquery.mobile-1.0a4.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js">
-</script>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
 </head>
 <body>
 
@@ -1902,7 +1901,7 @@ jquery.mobile-1.0a4.1.min.css" />
 				<h3>Order option</h3>
 				<form id="myform" action="formprocessor.php" method="post">
 					<div data-role="fieldcontain">
-						<label for="How-many">How many serving?</label>
+						<label for="How-many">How many serving?</label><br>
 							<select id="select-quantity1" name="select-quantity1">
 								<option value="">1</option>
 								<option value="">2</option>
@@ -1915,23 +1914,23 @@ jquery.mobile-1.0a4.1.min.css" />
 								<option value="">9</option>
 								<option value="">10</option>
 						</select>
-						<label for="How-many">Select Your Size:</label>
+						<br>
+						<label for="How-many">Select Your Size:</label><br>
 						<select id="select-size1" name="select-size1">
 								<option value="">Small $8</option>
 								<option value="">Large $12</option>
 						</select>
-						<input type="reset" value="reset" data-inline="true">
-					<input type="submit" value="submit" data-inline="true">
-					</div>
-					
+						
 
+					</div>
+					<a><span><img src="img/shopping-cart.PNG" width="" height=""> Add</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#" data-role="button" data-icon="">Pay Now</a>
 				</form>
 			</nav>
 		</div>
-	<footer data-role="ui-footer"><h1>O'Reilly</h1></footer>
+	<footer data-role="ui-footer"><h1></h1></footer>
 </section>
-
-
 
 
 
@@ -2092,5 +2091,7 @@ jquery.mobile-1.0a4.1.min.css" />
 <footer data-role="ui-footer">
 </footer>
 </section>
+
+
 </body>
 </html>
