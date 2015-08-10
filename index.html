@@ -3,18 +3,21 @@
 <head>
 
 <title>jQuery Mobile Application</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.2.1/jquery.mobile-1.2.1.min.js"></script>
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />
+<script src="jquery-1.11.1.min.js"></script>
+<script src="jquery.mobile-1.4.5.min.js"></script>
+
+
+
 </head>
 <body>
 
 <!-- begin first page.-->
 <section id="page1" data-role="page">
-	<header data-role="ui-header">
+	<header data-role="header">
 		<h1 style="text-align:center">Restaurant App</h1>
 	</header>
-<div data-role="ui-content" class="ui-content">
+<div data-role="content" class="content">
 	<nav data-role="navbar" class="ui-bar-b button">
 		<ul>
 			<li><a href="#page2"><img src="img/spoons.png" alt=""></a></li>
@@ -1931,22 +1934,30 @@
 </section>
 <!--End order option.-->	
 
-<!--Start pay now.-->
+<!--Start payment details.-->
 <section id="pagepaynow1" data-role="page">
 	<header data-role="header">
 		<h1 style="text-align:center">Restaurant</h1>
 	</header>
 		<div data-role="ui-content" class="ui-content">
 			<nav data-role="navbar" class="ui-bar-b button">	
-				<h3>Enter Payment details</h3>
+				
 				<form id="myform" action="formprocessor.php" method="post">
 					<div data-role="fieldcontain">
-						<label for="">Enter Card Name:</label><br>
-						<input name="cardname" value="" type="text" size="100%"><br><br>
+						<label for="">You ordered the following:</label><br><br>
+						<h3>Please Enter Payment Details</h3>
+						<label for="">Enter Card Holder Name:</label><br>
+						<input name="cardname" value="" type="text" size="20"><br><br>
 						<label for="">Enter Card Number:</label><br>
-						<input name="cardname" value="" type="text" size="100%"><br><br>
-						<label for="">Enter Code: <a href="#">(what is this?)</a></label><br>
-						<input name="cardname" value="" type="text" size="100%"><br><br>
+						<input name="cardname" value="" type="text" size="20" style="color:
+#FFFFFF"><br><br>
+						<label for="">Enter Code: 
+							
+ <a href="#myPopup" data-rel="popup" data-position-to="window">(what is this?)</a></label><br>
+						<input name="cardname" value="" type="text" size="20" ><br><br>
+						<label for="">Enter Bank Name:</label><br>
+						
+						<input name="cardname" value="" type="text" size="20"><br><br>
 						<label for="">Month expired:</label><br>
 							<select id="expiry" name="expiry">
 								<option value="">01Jan</option>
@@ -1986,12 +1997,19 @@
 					</div>
 				</form>
 			</nav>
+			   <div data-role="popup" id="myPopup">
+      <p>See CVV number on the right side of the card!</p> 
+      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/cvv.png" style="width:800px;height:400px;" alt="Skaret View">
+    </div>
 		</div>
 	<footer data-role="ui-footer"><h1></h1></footer>
 </section>
-<!--End pay now.-->
+<!--End payment details.-->
 
 
+
+
+  
 
 <!--  page -->
 <section id="page3" data-role="page">
