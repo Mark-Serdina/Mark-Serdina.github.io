@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Sears Rebate Finder</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+</head>
+<body>
+ <div data-role="page" id="mypage">
+ <div data-role="header">
+ <h1>Top Header</h1>
+ <a href="#email-dialog" data-rel="dialog">Email Popup 1 (works)!</a>
+ </div>
+ 
+ <div data-role="content" data-theme="d">
+ <div>
+ <ul id="cat-results-list" data-role="listview" data-theme="d" class="ui-grid-a">
+ <li>List item...</li><li>List item...</li><li>List item...</li>
+ <li>List item...</li><li>List item...</li><li>List item...</li>
+ <li>List item...</li><li>List item...</li><li>List item...</li>
+ <li>List item...</li><li>List item...</li><li>List item...</li>
+ <li>List item...</li><li>List item...</li><li>List item...</li>
+ </ul>
+ </div>
+ 
+ <p>
+ Some more content text...
+ </p>
+ </div>
+ 
+ <div data-role="footer">
+ <h1>Bottom Header</h1>
+ <a href="#email-dialog" data-rel="dialog">Email Popup 2 (doesn't)!</a>
+ </div>
+ 
+ </div>
+ 
+ <div data-role="page" id="email-dialog">
+ <div data-role="header">
+ <h1>My Dialog</h1>
+ </div>
+ <div data-role="content" data-theme="d">
+ Hi from dialog!<img src="img/cvv.PNG" style="width:800px;height:400px;" alt="Credit Card CVV">
+ </div>
+ </div>
+ 
+</body>
+</html>

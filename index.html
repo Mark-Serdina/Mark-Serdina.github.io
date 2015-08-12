@@ -3,22 +3,25 @@
 <head>
 
 <title>jQuery Mobile Application</title>
-<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
+
+<!--Local files ready to be use for future modifications-->
+<!--<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
 <script src="jquery-1.5.2.min.js"></script>
-<script src="jquery.mobile-1.0a4.1.min.js"></script>
-
-
-
+<script src="jquery.mobile-1.0a4.1.min.js"></script>-->
 </head>
 <body>
 
 <!-- begin first page.-->
 <section id="page1" data-role="page" class="homepage">
-	<header data-role="ui-header">
+	<header data-role="ui-header" style=" background: url(img/bg.PNG) no-repeat center center;" >
 		<h1 style="text-align:center">Restaurant App</h1>
 	</header>
 
-	<nav data-role="navbar" class="ui-bar-b homepage">
+	<nav data-role="navbar" class="ui-bar-b homepage" style=" background: url(img/bg.PNG) no-repeat center center;">
 		<ul>
 			<li><a href="#page2" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
             <img src="img/spoons.png" alt=""></a></li>
@@ -29,7 +32,6 @@
 			<li><p style="text-align:center">Menu</p></li>
 			<li><p style="text-align:center">News</p></li>
 		</ul>
-		<br/>
         <ul>
         	<li><a href="#page5" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
             <img src="img/photo.png" alt=""></a></li>
@@ -56,7 +58,7 @@
 	</nav>
 
 <footer data-role="ui-footer">
-	<h2 style="text-align:center">Restaurant</h2>
+	<h2 style="text-align:center;background: url(img/bg.PNG) no-repeat center center;">Restaurant</h2>
 </footer>
 </section>
 <!-- End first page.-->
@@ -68,9 +70,7 @@
 	</header>
 	<div data-role="ui-content" class="ui-content">
 		<nav data-role="navbar" class="bar-b button">
-            <header data-role="header">
 			<strong><img src="img/spoons.png" alt="" width="30">Menu</strong><br><br>
-            </header>
 			Appetizer
 			<ul>
 				<li><a href="#page2.1"><img src="img/garlicbread.PNG" height="150" width="300"
@@ -123,9 +123,7 @@
 	</header>
 	<div data-role="ui-content" class="ui-content">
 		<nav data-role="navbar" class="bar-b button">
-       	<header data-role="header">
 			<strong><img src="img/spoons.png" alt="" width="30">Appetizer</strong><br><br>
-        </header>
 			
 			<ul>
 				<li><a href="#"><img src="img/appettizer1.PNG" height="110" width="120"
@@ -3490,7 +3488,7 @@
 #FFFFFF"><br><br>
 						<label for="">Enter Code: 
 							
- <a href="#myPopup" data-rel="popup" data-position-to="window">(what is this?)</a></label><br><br>
+ <a href="#email-dialog" data-rel="dialog">(what is this?)</a></label><br><br>
 						<input name="cardname" value="" type="text" size="20" ><br><br><br>
 						<label for="">Enter Bank Name:</label><br>
 						
@@ -3539,15 +3537,25 @@
 					</div>
 				</form>
 			</nav>
-			   <div data-role="popup" id="myPopup">
-      <p>See CVV number on the right side of the card!</p> 
-      <p>You can close this image by clicking the X button on the top right side of the image!</p> 
-      <a href="#pageone" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a><img src="img/cvv.PNG" style="width:800px;height:400px;" alt="Credit Card CVV">
     </div>
 		</div>
 	<footer data-role="ui-footer"><h1></h1></footer>
 </section>
-<!--End payment details.-->
+<!--End payment details.--> 
+
+<!--Start pop image for credit card cvv number.--> 
+<div data-role="page" id="email-dialog">
+     <div data-role="header">
+    	 <h1>Credit Card CVV number</h1>
+     </div>
+     <div data-role="content" data-theme="d">
+        <p>See CVV number on the right side of the card!</p> 
+        <p>You can close this image by clicking the X button on the top right side of the image!</p>
+         <img src="img/cvv.PNG" style="width:800px;height:400px;" alt="Credit Card CVV">
+      </div>
+</div>
+<!--End pop image for credit card cvv number.--> 
+ 
 
 <!--Start unpaid order item check.-->
 <section id="unpaidorderitemcheck1" data-role="page">
@@ -3560,7 +3568,6 @@
 				<form id="" action="#" method="#">
                 <label for="">You ordered the following:</label><br><br>
                        <nav data-role="navbar" class="bar-b button">
-                        
                         <ul>
                         <li>
                         <p  style="color:#1CF30C">Click Yes if your order is correct</p>
@@ -3694,9 +3701,8 @@
 	</header>
 <div data-role="ui-content" class="ui-content">
 	<nav data-role="navbar" class="bar-b button">
-    <header data-role="header">
-		<strong><img src="img/photo.PNG" alt="" width="30" style="color:#27827B">Gallery</strong><br><br>
-        	</header>
+		<strong><img src="img/photo.PNG" alt="" width="30" style="color:#27827B">
+        Gallery</strong><br><br>
 		<ul>
 			<li><a href="" ><img src="img/restaurantInterior3.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior1.PNG" alt="" width="100" height="80"></a></li>
