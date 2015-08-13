@@ -4,7 +4,6 @@
 
 <title>jQuery Mobile Application</title>
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-<link rel="stylesheet" href="css/style.css" />
 <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
 
@@ -12,8 +11,43 @@
 <!--<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
 <script src="jquery-1.5.2.min.js"></script>
 <script src="jquery.mobile-1.0a4.1.min.js"></script>-->
+
+<style>
+	#wrapper .text {
+position:relative;
+bottom:30px;
+left:0px;
+visibility:hidden;
+}
+
+#wrapper:hover .text {
+visibility:visible;}
+
+div.transbox
+{
+  margin: 30px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  opacity:0.6;
+  filter:alpha(opacity=60); /* For IE8 and earlier */
+}
+div.transbox p
+{
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+}
+div.background
+{
+  background: url(img/fback.PNG);
+  border: 1px solid black;
+  width:100%;
+  height:350px;
+}
+</style>
 </head>
 <body>
+
 
 <!-- begin first page.-->
 <section id="page1" data-role="page" class="homepage">
@@ -21,11 +55,12 @@
 		<h1 style="text-align:center">Restaurant App</h1>
 	</header>
 
-	<nav data-role="navbar" class="ui-bar-b homepage" style=" background: url(img/bg.PNG) no-repeat center center;">
+	<nav data-role="navbar" class="ui-bar-b homepage" style="background: url(img/bg.PNG) no-repeat center center;
+background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}">
 		<ul>
-			<li><a href="#page2" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+			<li><a href="#page2" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
             <img src="img/spoons.png" alt=""></a></li>
-			<li><a href="#" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+			<li><a href="#" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
             <img src="img/restaurantnews.png" alt=""></a></li>
 		</ul>
 		<ul>
@@ -33,9 +68,9 @@
 			<li><p style="text-align:center">News</p></li>
 		</ul>
         <ul>
-        	<li><a href="#page5" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+        	<li><a href="#page5" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/photo.png" alt=""></a></li>
-            <li><a href="#" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+            <li><a href="#" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/location.png" alt=""></a></li>
            
         </ul>
@@ -44,9 +79,9 @@
             <li><p style="text-align:center">Location</p></li>
         </ul>
 		<ul>
-			<li><a href="#" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+			<li><a href="#" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/contactus.png" alt=""></a></li>
-			<li><a href="#" class="ui-btn-corner-all" style="margin-right:5px;margin-left:5px">
+			<li ><a href="#" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/information.png" alt=""></a></li>
 	
 		</ul>
@@ -56,6 +91,24 @@
 		
 		</ul>
 	</nav>
+    
+    
+<div id="wrapper">
+    <div class="background">
+   		 <div class="transbox text"> 
+         <nav data-role="navbar">
+   		 <ul>
+         <li>
+             <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif">
+             What do you think about our online service?</p> <br>
+             <a href="#">Add Feed Back</a>
+          </li>
+          </ul>
+          </nav>
+    	</div>
+	</div>
+</div>
+
 
 <footer data-role="ui-footer">
 	<h2 style="text-align:center;background: url(img/bg.PNG) no-repeat center center;">Restaurant</h2>
@@ -73,37 +126,37 @@
 			<strong><img src="img/spoons.png" alt="" width="30">Menu</strong><br><br>
 			Appetizer
 			<ul>
-				<li><a href="#page2.1"><img src="img/garlicbread.PNG" height="150" width="300"
+				<li><a href="#page2.1"><img src="img/garlicbread.PNG" height="200" width="300"
 					style="width:100%;"></a>
 				</li>
 			</ul>
 			Main dish
 			<ul>
-				<li><a href="#page3.1"><img src="img/bbq.PNG" height="150" width="300"
+				<li><a href="#page3.1"><img src="img/bbq.PNG" height="200" width="300"
 					style="width:100%;"></a>
 				</li>
 			</ul>
 			Salad
 			<ul>
-				<li><a href="#page4.1"><img src="img/greeksalad.PNG" height="150" width="300"
+				<li><a href="#page4.1"><img src="img/greeksalad.PNG" height="200" width="300"
 					style="width:100%;"></a>
 				</li>
 			</ul>
 			Pizza
 			<ul>
-				<li><a href="#page5.1"><img src="img/itallianpizza.PNG" height="150" width="300"
+				<li><a href="#page5.1"><img src="img/itallianpizza.PNG" height="200" width="300"
 					style="width:100%;"></a>
 				</li>
 			</ul>
 			Dessert
 			<ul>
-				<li><a href="#page6.1"><img src="img/yumydessert.PNG" height="150" width="300"
+				<li><a href="#page6.1"><img src="img/yumydessert.PNG" height="200" width="300"
 					style="width:100%;"></a>
 				</li>
 			</ul>
 			Drinks
 			<ul>
-				<li><a href="#page7.1"><img src="img/drinks.PNG" height="150" width="300"
+				<li><a href="#page7.1"><img src="img/drinks.PNG" height="200" width="300"
 					style="width:100%;">
 					</a>
 				</li>
@@ -476,7 +529,7 @@
 				</li>
 				<li>
 					1. Bloody mary<br><br>Price: $10<a href="#page7.1.1">View Recipe</a>
-					<a href="#">Order Now</a>
+					<a href="#pagedrink1">Order Now</a>
 				</li>
 			</ul>
 			<br>
@@ -484,7 +537,7 @@
 				<li><a href="#"><img src="img/vodka.PNG" height="110" width="120" 	 style="width:100%;"></a>
 				</li>
 				<li>
-					2. Vodka<br><br>Price: $10<a href="#page7.1.2">View Recipe</a><a href="#">Order Now</a>
+					2. Vodka<br><br>Price: $10<a href="#page7.1.2">View Recipe</a><a href="#pagedrink2">Order Now</a>
 				</li>
 			</ul>
 			<br>
@@ -492,7 +545,7 @@
 				<li><a href="#"><img src="img/sangria.PNG" height="110" width="120" 	 style="width:100%;"></a>
 				</li>
 				<li>
-					3. Sangria<br><br>Price: $10<a href="#page7.1.3">View Recipe</a><a href="#">Order Now</a>
+					3. Sangria<br><br>Price: $10<a href="#page7.1.3">View Recipe</a><a href="#pagedrink3">Order Now</a>
 				</li>
 			</ul>
 			<br>
@@ -500,7 +553,7 @@
 				<li><a href="#"><img src="img/ginmartini.PNG" height="110" width="120" style="	width:100%;"></a>
 				</li>
 				<li>
-					4. Gin martini<br><br>Price: $10<a href="#page7.1.4">View Recipe</a><a href="#">Order Now</a>
+					4. Gin martini<br><br>Price: $10<a href="#page7.1.4">View Recipe</a><a href="#pagedrink4">Order Now</a>
 				</li>
 			</ul>
 			<br>
@@ -508,8 +561,8 @@
 				<li><a href="#"><img src="img/virgincocumbermojito.PNG" height="110" width="120" style="width:100%;"></a>
 				</li>
 				<li>
-					5. Virgin cocumber mojito<br>Price: $10<a href="#page7.1.5">View Recipe</a>
-					<a href="#">Order Now</a>
+					5. Virgin cocumber mojito<br><br>Price: $10<a href="#page7.1.5">View Recipe</a>
+					<a href="#pagedrink5">Order Now</a>
 				</li>
 			</ul>
 		</nav>
@@ -3351,6 +3404,260 @@
 <!--End order option for Mango ice cream dessert.-->
 <!--End order option for Dessert.--->
 
+<!--Start order option for drinks.--->
+
+
+<!--Start order option for bloody mary.--->
+<section id="pagedrink1" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="bar-b button">	
+				<form id="myform" action="" method="post">
+					<div data-role="fieldcontain">
+                    	<label for="choice-bloodymary">Your choice of drink/s: </label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
+                        <h3>Order option</h3>
+						<label for="serving-bloodymary5">How many serving?</label><br>
+							<select id="select-quantity-bloodymary5" name="select-quantity-bloodymary5">
+                            	<option value="QuantityS-bloodymary">Select</option>
+								<option value="1-bloodymary">1</option>
+								<option value="2-bloodymary">2</option>
+								<option value="3-bloodymary">3</option>
+								<option value="4-bloodymary">4</option>
+								<option value="5-bloodymary">5</option>
+								<option value="6-bloodymary">6</option>
+								<option value="7-bloodymary">7</option>
+								<option value="8-bloodymary">8</option>
+								<option value="9-bloodymary">9</option>
+								<option value="10-bloodymary">10</option>
+						</select>
+						<br><br>
+                        <label for="size-vodka">Select size</label><br>
+						<select id="select-size-bloodymary5" name="select-size-bloodymary5">
+                                <option value="R-bloodymary">Glass $10</option>
+                                <option value="L-bloodymary">Bottle $44</option>
+						</select><br><br><br>
+                        <p style="color:#F80307">Remind to all customer/s that NO minors allowed at bar and 
+                        ID's will be ask to verify age. Drinks will not be serve to underage minors. </p>
+					</div>
+					<a><span><img src="img/shopping-cart.png" width="20" height="20"> Add to Cart</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+                     <ul>
+                        <li>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the Bar</a><br><br>
+                        </li>
+                    </ul>
+
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End order option for Bloody mary.-->
+
+<!--Start order option for vodka.--->
+<section id="pagedrink2" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="bar-b button">	
+				<form id="myform" action="" method="post">
+					<div data-role="fieldcontain">
+                    	<label for="choice-vodka">Your choice of drink/s:</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
+                        <h3>Order option</h3>
+						<label for="serving-vodka5">How many serving?</label><br>
+							<select id="select-quantity-vodka5" name="select-quantity-vodka5">
+                            	<option value="QuantityS-vodka">Select</option>
+								<option value="1-vodka">1</option>
+								<option value="2-vodka">2</option>
+								<option value="3-vodka">3</option>
+								<option value="4-vodka">4</option>
+								<option value="5-vodka">5</option>
+								<option value="6-vodka">6</option>
+								<option value="7-vodka">7</option>
+								<option value="8-vodka">8</option>
+								<option value="9-vodka">9</option>
+								<option value="10-vodka">10</option>
+						</select>
+						<br><br>
+                        <label for="size-vodka">Select size</label><br>
+						<select id="select-size-vodka5" name="select-size-vodka5">
+                                <option value="R-vodka">Glass $10</option>
+                                <option value="L-vodka">Bottle $44</option>
+						</select><br><br><br>
+                        <p style="color:#F80307">Remind to all customer/s that NO minors allowed at bar and 
+                        ID's will be ask to verify age. Drinks will not be serve to underage minors. </p>
+					</div>
+					<a><span><img src="img/shopping-cart.png" width="20" height="20"> Add to Cart</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+                     <ul>
+                        <li>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the Bar</a><br><br>
+                        </li>
+                    </ul>
+
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End order option for Vodka.-->
+
+<!--Start order option for sangria.--->
+<section id="pagedrink3" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="bar-b button">	
+				<form id="myform" action="" method="post">
+					<div data-role="fieldcontain">
+                    	<label for="choice-sangria">Your choice of drink/s:</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
+                        <h3>Order option</h3>
+						<label for="serving-sangria5">How many serving?</label><br>
+							<select id="select-quantity-sangria5" name="select-quantity-sangria5">
+                            	<option value="QuantityS-sangria">Select</option>
+								<option value="1-sangria">1</option>
+								<option value="2-sangria">2</option>
+								<option value="3-sangria">3</option>
+								<option value="4-sangria">4</option>
+								<option value="5-sangria">5</option>
+								<option value="6-sangria">6</option>
+								<option value="7-sangria">7</option>
+								<option value="8-sangria">8</option>
+								<option value="9-sangria">9</option>
+								<option value="10-sangria">10</option>
+						</select>
+						<br><br>
+                        <label for="size-sangria">Select size</label><br>
+						<select id="select-size-sangria5" name="select-size-sangria5">
+                                <option value="R-sangria">Glass $10</option>
+                                <option value="L-sangria">Bottle $35</option>
+						</select><br><br><br>
+                        <p style="color:#F80307">Remind to all customer/s that NO minors allowed at bar and 
+                        ID's will be ask to verify age. Drinks will not be serve to underage minors. </p>
+					</div>
+					<a><span><img src="img/shopping-cart.png" width="20" height="20"> Add to Cart</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+                     <ul>
+                        <li>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the Bar</a><br><br>
+                        </li>
+                    </ul>
+
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End order option for Sangria.-->
+
+<!--Start order option for Gin martini.-->
+<section id="pagedrink4" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="bar-b button">	
+				<form id="myform" action="" method="post">
+					<div data-role="fieldcontain">
+                    	<label for="choice-martini">Your choice of drink/s:</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
+                        <h3>Order option</h3>
+						<label for="serving-mojito5">How many serving?</label><br>
+							<select id="select-quantity-martini5" name="select-quantity-martini5">
+                            	<option value="QuantityS-martini">Select</option>
+								<option value="1-martini">1</option>
+								<option value="2-martini">2</option>
+								<option value="3-martini">3</option>
+								<option value="4-martini">4</option>
+								<option value="5-martini">5</option>
+								<option value="6-martini">6</option>
+								<option value="7-martini">7</option>
+								<option value="8-martini">8</option>
+								<option value="9-martini">9</option>
+								<option value="10-martini">10</option>
+						</select>
+						<br><br>
+                        <label for="size-martini">Select size</label><br>
+						<select id="select-size-martini5" name="select-size-martini5">
+                                <option value="R-martini">Glass $10</option>
+                                <option value="L-martini">Bottle $35</option>
+						</select><br><br><br>
+                        <p style="color:#F80307">Remind to all customer/s that NO minors allowed at bar and 
+                        ID's will be ask to verify age. Drinks will not be serve to underage minors. </p>
+					</div>
+					<a><span><img src="img/shopping-cart.png" width="20" height="20"> Add to Cart</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+                     <ul>
+                        <li>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the Bar</a><br><br>
+                        </li>
+                    </ul>
+
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End order option for Gin martini.-->
+
+<!--Start order option for Virgin cocumber mojito.-->
+<section id="pagedrink5" data-role="page">
+	<header data-role="header">
+		<h1 style="text-align:center">Restaurant</h1>
+	</header>
+		<div data-role="ui-content" class="ui-content">
+			<nav data-role="navbar" class="bar-b button">	
+				<form id="myform" action="" method="post">
+					<div data-role="fieldcontain">
+                    	<label for="choice-mojito">Your choice of drink/s::</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
+                        <h3>Order option</h3>
+						<label for="serving-mojito5">How many serving?</label><br>
+							<select id="select-quantity-mojito5" name="select-quantity-mojito5">
+                            	<option value="QuantityS-mojito">Select</option>
+								<option value="1-mojito">1</option>
+								<option value="2-mojito">2</option>
+								<option value="3-mojito">3</option>
+								<option value="4-mojito">4</option>
+								<option value="5-mojito">5</option>
+								<option value="6-mojito">6</option>
+								<option value="7-mojito">7</option>
+								<option value="8-mojito">8</option>
+								<option value="9-mojito">9</option>
+								<option value="10-mojito">10</option>
+						</select>
+						<br><br>
+                        <label for="size-mojito">Select size</label><br>
+						<select id="select-size-mojito5" name="select-size-mojito5">
+                                <option value="R-mojito">Glass $10</option>
+                                <option value="L-mojito">Jar $30</option>
+						</select><br><br><br>
+                        <p style="color:#F80307">Remind to all customer/s that NO minors allowed at bar and 
+                        ID's will be ask to verify age. Drinks will not be serve to underage minors. </p>
+					</div>
+					<a><span><img src="img/shopping-cart.png" width="20" height="20"> Add to Cart</span></a>
+					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+                     <ul>
+                        <li>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the Bar</a><br><br>
+                        </li>
+                    </ul>
+
+				</form>
+			</nav>
+		</div>
+	<footer data-role="ui-footer"><h1></h1></footer>
+</section>
+<!--End order option for  Virgin cocumber mojito.-->
+<!--End order option for drinks.--->
+
 <!--Start payment details.-->
 <section id="pagepaynow1" data-role="page">
 	<header data-role="header">
@@ -3550,7 +3857,7 @@
      </div>
      <div data-role="content" data-theme="d">
         <p>See CVV number on the right side of the card!</p> 
-        <p>You can close this image by clicking the X button on the top right side of the image!</p>
+        <p>You can close this image by clicking the X button on the top left side of the image!</p>
          <img src="img/cvv.PNG" style="width:100%;height:100%;" alt="Credit Card CVV">
       </div>
 </div>
