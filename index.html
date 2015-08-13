@@ -13,37 +13,83 @@
 <script src="jquery.mobile-1.0a4.1.min.js"></script>-->
 
 <style>
-	#wrapper .text {
-position:relative;
-bottom:30px;
-left:0px;
-visibility:hidden;
-}
+/****************************************************************************************************************/ 
+/******Start Home page menu styling*****/ 
+/******Start pop up text and transparent for feedback*****/ 
+#wrapper .text {position:relative;bottom:30px;left:0px;visibility:hidden;}
 
-#wrapper:hover .text {
-visibility:visible;}
+/***Hover***/
+#wrapper:hover .text {visibility:visible;}
 
+/***Transparent***/
 div.transbox
-{
-  margin: 30px;
-  background-color: #ffffff;
-  border: 1px solid black;
-  opacity:0.6;
-  filter:alpha(opacity=60); /* For IE8 and earlier */
-}
+{  margin: 30px;background-color:#ffffff;border:1px solid black;opacity:0.6;filter:alpha(opacity=60);
+/* For IE8 and earlier */}
+
+/***Transparent***/
 div.transbox p
-{
-  margin: 5%;
-  font-weight: bold;
-  color: #000000;
-}
-div.background
-{
-  background: url(img/fback.PNG);
-  border: 1px solid black;
-  width:100%;
-  height:350px;
-}
+{margin: 5%;font-weight:bold;color: #000000;}
+/******End pop up text and transparent for feedback*****/ 
+
+/******Start feedback image styling*****/ 
+div.background{background: url(img/fback.PNG);border: 1px solid black;width:100%;height:350px;}
+/******Start feedback image styling*****/ 
+/******End Home page menu styling*****/ 
+/****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for garlic bread image background styling (menu appetizer)*****/ 
+div.garlic-background{ background: url(img/garlicbread.PNG) fixed ;width:100%;height:500px; background-size:100%;}
+/******End  for garlic bread image background styling (menu appetizer)*****/ 
+
+/******Start  appetizer text and transparent styling*****/ 
+div.garlic-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End  appetizer transparent and text styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for BBQ image background styling (menu main dish)*****/ 
+div.BBQ-background{background:url(img/bbq.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for BBQ image background styling (menu main dish)*****/ 
+
+/******Start main dish text and transparent styling*****/ 
+div.BBQ-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End main dish text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for salad image background styling (menu salad)*****/ 
+div.salad-background{background:url(img/greeksalad.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for salad image background styling (menu salad)*****/ 
+
+/******Start salad text and transparent styling*****/ 
+div.salad-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End salad text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for pizza image background styling (menu pizza)*****/ 
+div.pizza-background{background:url(img/supremepizza.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu pizza)*****/ 
+
+/******Start pizza text and transparent styling*****/ 
+div.pizza-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End pizza text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for dessert image background styling (menu dessert)*****/ 
+div.dessert-background{background:url(img/yumydessert.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu dessert)*****/ 
+
+/******Start dessert text and transparent styling*****/ 
+div.dessert-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End dessert text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for drinks image background styling (menu drinks)*****/ 
+div.drinks-background{background:url(img/drinks.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu dessert)*****/ 
+
+/******Start drinks text and transparent styling*****/ 
+div.drinks-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End drinks text and transparent styling*****/ /****************************************************************************************************************/
 </style>
 </head>
 <body>
@@ -94,7 +140,7 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
     
     
 <div id="wrapper">
-    <div class="background">
+    <div class="background" style="width:100%">
    		 <div class="transbox text"> 
          <nav data-role="navbar">
    		 <ul>
@@ -124,41 +170,112 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 	<div data-role="ui-content" class="ui-content">
 		<nav data-role="navbar" class="bar-b button">
 			<strong><img src="img/spoons.png" alt="" width="30">Menu</strong><br><br>
-			Appetizer
 			<ul>
-				<li><a href="#page2.1"><img src="img/garlicbread.PNG" height="200" width="300"
-					style="width:100%;"></a>
+				<li>
+                <div class="garlic-background">
+                	<div class="garlic-transparent">
+                        <a href="#page2.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
+                                 color:#E90C3C; font-size:36px"">
+                                 Appetizer</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
-			Main dish
 			<ul>
-				<li><a href="#page3.1"><img src="img/bbq.PNG" height="200" width="300"
-					style="width:100%;"></a>
+				<li>
+                <div class="BBQ-background">
+                	<div class="BBQ-transparent">
+                        <a href="#page3.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
+                                 color:#097EF8; font-size:36px">
+                                 Main Dish</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
-			Salad
-			<ul>
-				<li><a href="#page4.1"><img src="img/greeksalad.PNG" height="200" width="300"
-					style="width:100%;"></a>
+		    <ul>
+				<li>
+                <div class="salad-background">
+                	<div class="salad-transparent">
+                        <a href="#page4.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
+                                 #14E399; font-size:36px">
+                                 Salad</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
-			Pizza
 			<ul>
-				<li><a href="#page5.1"><img src="img/itallianpizza.PNG" height="200" width="300"
-					style="width:100%;"></a>
+				<li>
+                <div class="pizza-background">
+                	<div class="pizza-transparent">
+                        <a href="#page5.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
+                                 #0EE4F7; font-size:36px">
+                                 Pizza</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
-			Dessert
 			<ul>
-				<li><a href="#page6.1"><img src="img/yumydessert.PNG" height="200" width="300"
-					style="width:100%;"></a>
+				<li>
+                <div class="dessert-background">
+                	<div class="dessert-transparent">
+                        <a href="#page6.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
+                                 #0F62F3; font-size:36px">
+                                 Dessert</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
-			Drinks
 			<ul>
-				<li><a href="#page7.1"><img src="img/drinks.PNG" height="200" width="300"
-					style="width:100%;">
-					</a>
+				<li>
+                <div class="drinks-background">
+                	<div class="drinks-transparent">
+                        <a href="#page7.1">
+                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                        style="width:100%;">-->
+                        <ul>
+                            <li>
+                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
+                                 #F90CDA; font-size:36px">
+                                 Drinks</p>
+                            </li>
+                        </ul></a>
+                    </div>
+                </div>
 				</li>
 			</ul>
 		</nav>
