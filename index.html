@@ -90,6 +90,8 @@ div.drinks-background{background:url(img/drinks.PNG)fixed;width:100%;height:500p
 /******Start drinks text and transparent styling*****/ 
 div.drinks-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
 /******End drinks text and transparent styling*****/ /****************************************************************************************************************/
+
+#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }
 </style>
 </head>
 <body>
@@ -116,7 +118,7 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
         <ul>
         	<li><a href="#page5" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/photo.png" alt=""></a></li>
-            <li><a href="#locationpage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+            <li><a href="#map-page" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
             <img src="img/location.png" alt=""></a></li>
            
         </ul>
@@ -278,17 +280,23 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
 		<h1 style="text-align:center">Restaurant</h1>
 	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Coming Soon...</strong><hr>                 
-                    </div>   
-		</div>
+    
+          
+               
 <footer data-role="ui-footer">
 	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
 </footer>
 </section>
 <!-- End location page.-->
 
+<div data-url="map-page" data-role="page" id="map-page">
+    <div data-role="header" data-theme="a">
+    <h1>Maps</h1>
+    </div>
+    <div role="main" class="ui-content" id="map-canvas">
+        <!-- map loads here... -->
+    </div>
+</div> 
 
 <!-- begin my details page.-->
 <section id="mydetails" data-role="page" class="homepage">
@@ -4303,7 +4311,37 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 </footer>
 </section>
 <!--End gallery restaurant photos.-->
-
-
+<script>
+$( document ).on( "pageinit", "#map-page", function() {
+    var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
+    if ( navigator.geolocation ) {
+        function success(pos) {
+            // Location found, show map with these coordinates
+            drawMap(new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude));
+        }
+        function fail(error) {
+            drawMap(defaultLatLng);  // Failed to find location, show default map
+        }
+        // Find the users current position.  Cache the location for 5 minutes, timeout after 6 seconds
+        navigator.geolocation.getCurrentPosition(success, fail, {maximumAge: 500000, enableHighAccuracy:true, timeout: 6000});
+    } else {
+        drawMap(defaultLatLng);  // No geolocation support, show default map
+    }
+    function drawMap(latlng) {
+        var myOptions = {
+            zoom: 10,
+            center: latlng,
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+        // Add an overlay to the map of current lat/lng
+        var marker = new google.maps.Marker({
+            position: latlng,
+            map: map,
+            title: "Greetings!"
+        });
+    }
+});
+</script>
 </body>
 </html>
