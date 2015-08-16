@@ -1,12 +1,38 @@
+<!--
+Student name: Mark Serdina
+ID: 213145792  
+
+Assignment 1 - Project 1 Restaurant Application
+Unit name: Mobile Computing
+Unit Code: SIT313
+
+Deakin University 
+
+Trimister 2, 2015 
+
+Due Date: 16/8/2015              
+-->
+
+
 <!DOCTYPE html>
-<html>
-<head>
+<html><head>
 
 <title>Restaurant</title>
+<!--(Start)---Files are hosted privately-->
+<link rel="stylesheet" href="themes/themeroller1.min.css" /><!--Theme roller styling. Hosted privately-->
+<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" /><!--Theme roller styling. Hosted privately-->
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" /><!--External CSS hosted privately-->
+<script src="jquery-1.11.1.min.js"></script><!--External javascript hosted privately-->
+<script src="jquery.mobile-1.4.5.min.js"></script><!--External javascript hosted privately-->
+<!--(Start)---Files are hosted privately-->
+
+
+
+<!--Old version of Jquery mobile
 <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
 <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
 <script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>-->
 
 <!--Local files ready to be use for future modifications-->
 <!--<link rel="stylesheet" href="jquery.mobile-1.0a4.1.min.css" />
@@ -14,6 +40,7 @@
 <script src="jquery.mobile-1.0a4.1.min.js"></script>-->
 
 <style>
+/****Additional CSS to enhance features*****/
 /****************************************************************************************************************/ 
 /******Start Home page menu styling*****/ 
 /******Start pop up text and transparent for feedback*****/ 
@@ -94,450 +121,566 @@ div.drinks-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity
 
 .page-map, .ui-content, #map-canvas { width: 100%; height: 100%; padding: 0; }
 </style>
-
-<script>
-$('.page-map').live("pagecreate", function() {
-  //lat and lng of Paris
-  var lat = 48.857035,
-      lng = 2.352448;
-  var latlng = new google.maps.LatLng(lat, lng);
-  var myOptions = {
-      zoom: 14,
-      center: latlng,
-      mapTypeId: google.maps.MapTypeId.ROADMAP
-  };
-  var map = new google.maps.Map(document.getElementById("map-canvas"),myOptions);
-});
-</script>
 </head>
 <body>
+<!-- begin first or homepage.-->
+<section id="page1" data-role="page" class="ui-body-a" data-theme="a"><!--section:creates the first page, data role: 1st page, classui-body-a creates the styling and the background, data-theme creates another styling-->
+	<header data-role="ui-header" class="ui-header-fullscreen" data-theme="b" style="background-color:#ECF90E">
+        <h1 style="text-align:center"><img src="img/logo.PNG" width="300" height="100"></h1><!--Displays the restaurant logo in the center of the page-->
+          <div data-role="navbar"><!--creates two nav bar search and shopping cart-->
+                <ul>
+                  <li>
+                  	<a href="#myPopup" class=" ui-icon-search ui-btn-icon-left" data-rel="popup">Search</a>
+                     <!--Pop up link for search input in the navbar, icon on the left side-->
+                  </li>
+                  <li>
+                  	<a href="#myCart" data-rel="popup" data-position-to="window">Cart</a>
+                    <!--Pop up link for shopping cart in the navbar, no icon available for cart-->
+                  </li>
+                </ul>
+	      </div><!--End nav bar-->
+    </header><!--End header-->
+          
+<!--Start search pop up-->
+    <div data-role="popup" id="myPopup">
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext
+     	ui-btn-right">Close</a><!--X Button on the right to close the search input.-->
+      	<input type="search" size="100%"><!--Search input.-->
+    </div>
+  </div><!--End div for id myPopup-->
+<!--End search pop up-->
 
+<!--Start shopping cart pop up table-->
+    <div data-role="popup" id="myCart" class="ui-content"><!--Start div content for shopping cart pop up-->
+    	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn ui-icon-delete ui-btn-icon-notext
+         ui-btn-left">Close</a><br><!--X Button on the left to close the shopping cart pop up table.-->
+     <h3>Your Cart items</h3><!--Table name-->
+     <table><!--Start table-->
+     	<tr><!--Rows for shopping cart table-->
+       		<thead>Number:</thead><!--Column name-number use to identify the number of the item-->
+        	<thead>Name:</thead><!--Column name-Name use to name item-->
+            <thead>Price:</thead><!--Column name-Price use for item prices-->
+            <thead></thead><!--empty column on the right of the table-->
+        </tr>
+        <tr><!--Rows for shopping cart table-->
+        	<td>1</td><!--Example number 1 item-->
+            <td></td><!--column to put the name of the item-->
+            <td></td><!--column for price-->
+            <td><input type="button" value="delete"></td>
+        </tr>
+        <tr><!--Rows for shopping cart table-->
+        	<td>2</td>
+            <td></td><!--column to put the name of the item-->
+            <td></td><!--column for price-->
+            <td><input type="button" value="delete"></td>
+        </tr>
+        <tr><!--Rows for shopping cart table-->
+        	<td>3</td>
+            <td></td><!--column to put the name of the item-->
+            <td></td><!--column for price-->
+            <td><input type="button" value="delete"></td>
+        </tr>
+        <tr><!--Rows for shopping cart table-->
+        	<td>4</td>
+            <td></td><!--column to put the name of the item-->
+            <td></td><!--column for price-->
+            <td><input type="button" value="delete"></td>
+        </tr>
+        <tr><!--Rows for shopping cart table-->
+        	<td>...</td>
+            <td></td><!--column to put the name of the item-->
+            <td></td><!--column for price-->
+            <td><input type="button" value="delete"></td>
+        </tr>
+        <form><!--(start form) Form that will submit the items details for payment-->
+             <tr><!--Rows for shopping cart table-->
+                <td>Total items</td>
+                <td></td>
+                <td>Total price</td>
+                <td>$0AUD</td>
+            </tr>
+            <tr><!--Rows for shopping cart table-->
+            	<td>
+                    <a href="#">
+                    	<input type="button" value="Pay Now"><!--Button to pay for the items added to the shopping cart-->
+                    </a><!--Link to enter payment details-->
+                <td>
+            </tr>
+        </form><!--(end form) Form that will submit the items details for payment-->
+     </table><!--End table-->
+    </div><!--End div content for shopping cart pop up-->
+<!--End shopping cart pop up table-->
 
-<!-- begin first page.-->
-<section id="page1" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG); background-image:100%" >
-		<h1 style="text-align:center">Restaurant App</h1>
-	</header>
-
-	<nav data-role="navbar" class="ui-bar-b homepage" style="background: url(img/bg.PNG) no-repeat center center;
-background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}">
-		<ul>
-			<li><a href="#page2" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
-            <img src="img/spoons.png" alt=""></a></li>
-			<li><a href="#newspage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
-            <img src="img/restaurantnews.png" alt=""></a></li>
+<!--(Start navbar) for restaurant service options: menu, news, gallery, location, contact, info, programmer & details-->
+	<nav data-role="navbar" class="ui-navbar ui-corner-all" style="background: url(img/bg.PNG) no-repeat center center;
+		background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 100%;-o-background-size: 100%;
+    	background-size: 100%;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;	
+   		background-size: cover;}" data-theme="a">
+        <!--data role:navbar, ui-navbar creats the styling, ui-corner-all creates the button into corner border. Added
+        style to add background photo in a fix position and data theme to add styling the page.-->
+		<ul><!--ul seprates two buttons each row-->
+			<li><!--button-->
+            	<a href="#page2" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
+            		<img src="img/spoons.png" alt=""><!--menu icon image-->
+                </a><!--Menu button link to page2(menu page)-->
+            </li>
+			<li><!--button-->
+            	<a href="#newspage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px;margin-top:5px">
+            		<img src="img/restaurantnews.png" alt=""><!--news icon image-->
+                </a><!--News button link to newspage (news page)-->
+            </li>
 		</ul>
-		<ul>
-			<li><p style="text-align:center">Menu</p></li>
-			<li><p style="text-align:center">News</p></li>
+		<ul><!--ul seprates two buttons each row-->
+			<li><p style="text-align:center">Menu</p></li><!--Name of the button-->
+			<li><p style="text-align:center">News</p></li><!--Name of the button-->
 		</ul>
-        <ul>
-        	<li><a href="#page5" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/photo.png" alt=""></a></li>
-            <li><a href="#map-page" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/location.png" alt=""></a></li>
-           
+        <ul><!--ul seprates two buttons each row-->
+        	<li><!--button-->
+            	<a href="#page5" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+           			<img src="img/photo.png" alt=""><!--gallery icon image-->
+                </a><!--Gallery button link to page5 (gallery page)-->
+            </li>
+            <li><!--button-->
+                <a transition="flip" href="map.html" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+                	<img src="img/location.png" alt=""><!--location icon image-->
+                </a><!--Location button link to external page map.html (location page of the user, no restaurant location 
+                set yet)-->
+            </li>
         </ul>
-         <ul> 
-         	<li><p style="text-align:center">Gallery</p></li>	
-            <li><p style="text-align:center">Location</p></li>
+         <ul><!--ul seprates two buttons each row--> 
+         	<li><p style="text-align:center">Gallery</p></li><!--Name of the button-->	
+            <li><p style="text-align:center">Location</p></li><!--Name of the button-->
         </ul>
 		<ul>
-			<li><a href="#contactpage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/contactus.png" alt=""></a></li>
-			<li ><a href="#infopage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/information.png" alt=""></a></li>
+			<li><!--button-->
+            	<a href="#contactpage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+            		<img src="img/contactus.png" alt=""><!--contact us icon image-->
+                </a><!--Contact us button link to contactpage-->
+            </li>
+			<li><!--button-->
+            	<a href="#infopage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+            		<img src="img/information.png" alt=""><!--information image-->
+                </a><!--Information button link to infopage-->
+            </li>
 	
 		</ul>
-		<ul>
-			<li><p style="text-align:center">Contact</p></li>
-			<li><p style="text-align:center">Info</p></li>
+		<ul><!--ul seprates two buttons each row-->
+			<li><p style="text-align:center">Contact</p></li><!--Name of the button-->
+			<li><p style="text-align:center">Info</p></li><!--Name of the button-->
 		
 		</ul>
-        <ul>
-			<li><a href="#mydetails" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/programmer.PNG" alt="" width="70" height="70"></a></li>
-           	<li><a href="#dealspage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
-            <img src="img/deals.PNG" alt="" width="70" height="70"></a></li>
+        <ul><!--ul seprates two buttons each row-->
+			<li><!--button-->
+            	<a href="#mydetails" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+            		<img src="img/programmer.PNG" alt="" width="70" height="70"><!--programmer icon image-->
+                </a><!--programmer button link to my details page (programmer details-->
+            </li>
+           	<li><!--button-->
+            	<a href="#dealspage" class="ui-btn-corner-all" style="margin-right:30px;margin-left:30px">
+            		<img src="img/deals.PNG" alt="" width="70" height="70"><!--deals icon image-->
+                </a><!--Deals button link to deals page (Deals list)-->
+            </li>
         </ul>
-        <ul>
-			<li><p style="text-align:center">Programmer</p></li>
-			<li><p style="text-align:center">Deals</p></li>
+        <ul><!--ul seprates two buttons each row-->
+			<li><p style="text-align:center">Programmer</p></li><!--Name of the button-->
+			<li><p style="text-align:center">Deals</p></li><!--Name of the button-->
 		
-		</ul>
-	</nav>
-   
-<div id="wrapper">
-    <div class="background" style="width:100%">
-   		 <div class="transbox text"> 
-         <nav data-role="navbar">
+		</ul>   
+	</nav><!--End navigation bars-->
+    
+<!--(Start) Feed back section in the homepage-->
+<div id="wrapper"><!--(Start div, id=wrapper link to css in the header of this page) 
+pop up transparent box for feed back: question, enter feedback and view all feedback-->
+    <div class="background" style="width:100%"><!--(Start div, id=background)Background styling of the feeback section in 
+    											the homepage-->
+   		 <div class="transbox text"><!--transbox creates the transparent pop up background of the feedback section in the
+          							homepage-->
+         <nav data-role="navbar"><!--Creates the buttons: Click here to add Feed Back, Click here to view all feedbacks-->
    		 <ul>
-         <li>
-             <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif">
-             	What do you think about our online service?<a href="#feedbackpage" style="color:#0FF345; font-size:12px">Click here to add Feed Back</a>
-                <a href="#" style="color:#0FF345; font-size:12px">Click here to view all feedbacks</a>
-             </p>
-             
-          </li>
+             <li>
+                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif">
+                    What do you think about our online service?
+                    <a href="#feedbackpage" style="color:#0FF345; font-size:12px">Click here to add Feed Back</a>				                    <!--button-->
+                    <a href="#" style="color:#0FF345; font-size:12px">Click here to view all feedbacks</a>
+                    <!--button-->
+                 </p><!--grouped the question and the buttons all together-->
+              </li>
           </ul>
-          </nav>
-    	</div>
-	</div>
-</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG); background-image:100%">Copyright &copy;
-     2015 Mark Serdina</h2>
-</footer>
-</section>
-<!-- End first page.-->
+          </nav><!--End navbar data-role=navbar-->
+    	</div><!--End div, class=transbox text-->
+	</div><!--(End div, id=background)Background styling of the feeback section in 
+    	  the homepage-->
+</div><!--(End div, id=wrapper link to css in the header of this page) 
+       pop up transparent box for feed back: question, enter feedback and view all feedback-->
+<!--(End) Feed back section in the homepage-->
+
+    <footer data-role="ui-footer"><!--(Start footer)-->
+        <h2 style="text-align:center">Copyright &copy;
+         2015 Mark Serdina</h2>
+    </footer><!--(End footer) data-role=ui-footer-->
+</section><!--End section, id=page1-->
+<!-- End first or homepage page.-->
 
 <!-- begin Feedback page.-->
-<section id="feedbackpage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
-	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-        		<a href="#">View All Feedbacks</a>
-				<form id="myform" action="" method="post">
+<section id="feedbackpage" data-role="page" class="homepage" data-theme="c"><!--Start section of feedback page-->
+	<header data-role="ui-header-fullscreen" style=" background: url(img/bg.PNG);background-image:100%"><!--(Start)-Header for restaurant title and home icon button-->
+		<h1 style="text-align:center">Restaurant</h1><!--Heading title-->
+          <div class="ui-bar"><!--Start div for home icon button, ui-bar creates the styling of the bar-->
+                <ul>
+                  <li>
+                  	  <a href="#page1" class=" ui-icon-home ui-btn-icon-left"></a><!--home icon button-->
+                  </li>
+                </ul>
+           </div><!--End div for home icon button, class=ui-bar-->    
+	</header><!--(End)-Header for restaurant title and home icon button-->
+    	<div data-role="content" class="content ui-btn-a"><!--(Start content), content and ui-button-a sets the content
+         styling-->	
+        		<a href="#">View All Feedbacks</a><!--Link to view all feedback-->
+				<form id="myform" action="" method="post"><!--(Start) form for feedback submission-->
 					<div data-role="fieldcontain">
-                    
-                    	<label for="choice-vodka">Enter Your Feedback:</label><br><br>
-						<textarea></textarea>
-						<br><br>
-                        <p style="color:#15E453">Enter Your details</p>
-                    	<label for="choice-vodka">Customer Name:</label><br><br>
-						<input type="text">
-						<br><br>
-                        <label for="choice-vodka">Phone Number:</label><br><br>
-						<input type="text">
-                       	<p>Do you want us to call you?</p><br><input type="checkbox">
-						<br><br>
-                        <label for="choice-vodka">Email:</label><br><br>
-						<input type="text">
-						<br><br>
-                        <input type="reset" value="Clear">
-                        <input type="submit" value="Post">
-                      
-                    </div>   
-				</form>
-		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
+                    	<label for="">Enter Your Feedback:</label><!--Label of the text area--><br><br>
+                            <!-- br tag for spaces-->
+                            <textarea></textarea><!--text area for customers to input feedback-->
+                            <br><br><!-- br tag for spaces-->
+                        <p style="color:#15E453">Enter Your details</p><!--Title for entering customer details-->
+                            <label for="">Customer Name:</label><!--Label for customer name input-->
+                                <br><br><!-- br tag for spaces-->
+                                <input type="text"><!--customer name input box-->
+                                <br><br><!-- br tag for spaces-->
+                            <label for="">Phone Number:</label><br><br><!-- br tag for spaces-->
+                                <input type="text"><br><br><!-- br tag for spaces-->
+                            <p>Do you want us to call you?</p><br><!-- br tag for spaces-->
+                                <input type="button" value="Yes"><!--Yes button to answer the question whether customers 
+                                wants to be called on the phone-->
+                                <br><br><br><!-- br tag for spaces-->
+                            <label for="">Email:</label><br><br><!-- br tag for spaces-->
+                                <input type="text"><!--input text for email-->
+                                <br><br><!-- br tag for spaces-->
+                           		<input type="reset" value="Clear"><!--Button to clear all entered text-->
+                                <br><br><!-- br tag for spaces-->
+                                <input type="button" value="Post"><!--Button to submit the feedback-->
+                    </div><!--End div, data-role fieldcontain-->
+				</form><!--(End) form for feedback submission-->
+		</div><!--(End div, content), class="content ui-btn-a-->
+    <footer data-role="ui-footer"><!--(Start footer)-->
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2><!--footer name-->
+    </footer><!--(End footer)-->
+</section><!--End section of feedback page, id=feedbackpage-->
 <!-- End Feedback page.-->
 
-<!-- begin my Info page.-->
-<section id="infopage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
+<!-- begin my Information page.-->
+<section id="infopage" data-role="page" class="homepage"><!--(start section iformation page), id=infopage is link to the info icon in the homepage-->
+	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Coming Soon...</strong><hr>                 
+    	<div data-role="ui-content" class="ui-content btn"><!--Content of information page-->
+					<div data-role="fieldcontain"><!---->
+                    	<strong>Coming Soon...</strong><hr><!--page currently under developed-->                  
                     </div>   
 		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
+    <footer data-role="ui-footer"><!--(Start)-Footer of the informatin page--> 
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2><!--Footer name with        background image--> 
+    </footer><!--(End)-Footer of the informatin page--> 
 </section>
-<!-- End contact page.-->
+<!-- End information page.-->
 
-<!-- begin my Info page.-->
-<section id="contactpage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
-	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Coming Soon...</strong><hr>                 
+<!-- begin my contact page.-->
+<section id="contactpage" data-role="page" class="homepage"><!--(start section contact page), id=contactpage is link to the contact icon in the homepage-->
+	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" ><!--(Start) Header with background image-->
+		<h1 style="text-align:center">Restaurant</h1><!---->
+    	<div data-role="ui-content" class="ui-content btn"><!--Content of contact page-->
+					<div data-role="fieldcontain"><!---->
+                    	<strong>Coming Soon...</strong><hr><!--page currently under developed-->               
                     </div>   
 		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
+    <footer data-role="ui-footer">
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2><!--(Start) Footer
+         with background image-->
+    </footer><!--(End) Footer with background image-->
+</section><!--(End section contact page)-->
 <!-- End contact page.-->
 
 <!-- begin my news page.-->
-<section id="newspage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="newspage" data-role="page" class="homepage"><!--(start section news page),  id=newspage is link to the news icon in the homepage-->
+	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%"><!--(Start) Header with background image-->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Coming Soon...</strong><hr>                 
+    	<div data-role="ui-content" class="ui-content btn"><!--Content of news page-->
+					<div data-role="fieldcontain"><!---->
+                    <strong>Coming Soon...</strong><hr><!--page currently under developed-->               
                     </div>   
 		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
+    <footer data-role="ui-footer">
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
+    </footer>
+</section><!--(End section, id=newspage)-->
 <!-- End news page.-->
 
 <!-- begin my deals page.-->
-<section id="dealspage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="dealspage" data-role="page" class="homepage"><!--(start section deals page), id=dealspage is link to the deals icon in the homepage-->
+	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" ><!--(Start) Header with background image-->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Coming Soon...</strong><hr>                 
+    	<div data-role="ui-content" class="ui-content btn"><!--Content of deals page-->
+					<div data-role="fieldcontain"><!---->
+                    <strong>Coming Soon...</strong><hr><!--page currently under developed-->                
                     </div>   
 		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
+    <footer data-role="ui-footer">
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
+    </footer>
+</section><!--(End section, id=dealspage)-->
 <!-- End deals page.-->
 
-<!-- begin my location page.-->
-<section id="locationpage" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
-	</header>
-    
-          
-               
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
-<!-- End location page.-->
-
-
-<div data-role="page" id="map-page">
-  <div data-role="header"><h1>Map View</h1></div>
-  <div data-role="content">
-    <div id="map-canvas">
-    <!-- map loaded here... -->
-    </div>
-  </div>
-</div>
-
-
 <!-- begin my details page.-->
-<section id="mydetails" data-role="page" class="homepage">
-	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%" >
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="mydetails" data-role="page" class="homepage"><!--Developer section page, id=mydetails is link to programmer icon in the homepage-->
+	<header data-role="ui-header" style=" background: url(img/bg.PNG);background-image:100%"><!--(Start) Header with background image-->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-    	<div data-role="ui-content" class="ui-content btn">	
-					<div data-role="fieldcontain">
-                    <strong>Developer details</strong><hr>
-                     <p>Mark Serdina</p>
-                    <img src="img/me.PNG">
-                     	<p>Entreprenuer</p>
-                        <p>Programmer</p>
-                         <p>Businesses:<br><ul></ul> <a href="#">AppGlobe</a>, <a href="#">Barteryouworld</a></p><br>
-                        <p>Email: mek_mak444@yahoo.com<br><input type="button" value="Send me an email"></p>
-                        <p>Phone number:0423167290<br><input type="button" value="Call me"></p>                    
-                    </div>   
-		</div>
-<footer data-role="ui-footer">
-	<h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
-</footer>
-</section>
+    	<div data-role="ui-content" class="ui-content btn"><!-- (Start) Developer page content-->
+					<div data-role="fieldcontain"><!--Start field contain-->
+                        <strong>Developer details</strong><hr><!--details-->
+                         <p>Mark Serdina</p><!--Developer name-->
+                         <img src="img/me.PNG"><!--Developer image-->
+                            <p>Entreprenuer</p><!--details-->
+                            <p>Programmer</p><!--details-->
+                            <p>Businesses:<br> <!--details-->
+                                <a href="#">AppGlobe</a>, <a href="#">Barteryouworld</a><!--details-->
+                            <p>Email: mek_mak444@yahoo.com<br>
+                            	<input type="button" value="Send me an email"><!--button to send the developer an email-->
+                            </p>
+                            <!--details-->
+                            <p>Phone number:0423167290<br><input type="button" value="Call me"></p>
+                            <!--details-->
+                    </div><!--End div, feildcontain-->   
+		</div><!--(End) Developer page content-->
+    <footer data-role="ui-footer">
+        <h2 style="text-align:center;background: url(img/bg.PNG);background-image:100%">Restaurant</h2>
+    </footer>
+</section><!--Developer section page, id=mydetails-->
 <!-- End details page.-->
 
 <!--Start restaurant menu.-->
-<section id="page2" data-role="page">
-	<header data-role="header">
+<section id="page2" data-role="page"><!--Restaurant section menu page, contains all the menu categories: appetizer, maindish, salad, pizza, dessert, and drinks-->
+	<header data-role="header"><!--Header-->
 		<h1 style="text-align:center">Restaurant</h1>
 	</header>
-	<div data-role="ui-content" class="ui-content">
-		<nav data-role="navbar" class="bar-b button">
-			<strong><img src="img/spoons.png" alt="" width="30">Menu</strong><br><br>
-			<ul>
-				<li>
-                <div class="garlic-background">
-                	<div class="garlic-transparent">
-                        <a href="#page2.1">
-                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
-                        style="width:100%;">-->
-                        <ul>
-                            <li>
-                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
-                                 color:#E90C3C; font-size:36px"">
-                                 Appetizer</p><p>click here</p>
-                            </li>
-                        </ul></a>
+	<div data-role="ui-content" class="ui-content"><!--(Start)-Restaurant menu type content-->
+		<nav data-role="navbar" class="bar-b button"><!--Navbar for menu link buttons-->
+			<strong><img src="img/spoons.png" alt="" width="30">Menu</strong><!--Page name-->
+            <br><br>
+			<ul><!--(start) ul tag #1-->
+				<li><!--(start li) creates a row button for appetizer menu-->
+                <div class="garlic-background"><!--(start div), class=garlic-background link to css in th main header of this file, creates the background styling-->
+                	<div class="garlic-transparent"><!--(start div), class=garlic-transparent link to css in th main header of this file, creates the transparent background styling-->
+                        <a href="#page2.1"><!---->
+                            <ul><!--(start) ul tag #1.1-->
+                                <li><!--(start) li for appetizer button name and click here link-->
+                                     <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
+                                     color:#E90C3C; font-size:36px""><!---->
+                                     Appetizer</p><p>click here</p><!---->
+                                </li><!--(End) li for appetizer button name and click here link-->
+                            </ul><!--(End) ul tag #1.1-->
+                        </a>
+                    </div><!--(End div), class=garlic-transparent-->
+                </div><!--(End div, class=garlic-background)-->
+				</li><!--(End li) creates a row button for appetizer menu-->
+			</ul><!--(End) ul tag #1-->
+			<ul><!--comments below are the same meaning as the comments for appetizer button-->
+				<li><!---->
+                <div class="BBQ-background"><!---->
+                	<div class="BBQ-transparent"><!---->
+                        <a href="#page3.1"><!---->
+                            <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                            style="width:100%;">-->
+                            <ul>
+                                <li><!---->
+                                     <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
+                                     color:#097EF8; font-size:36px">
+                                     Main Dish
+                                     </p><!---->
+                                     <p>click here</p><!---->
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
 				</li>
 			</ul>
-			<ul>
-				<li>
-                <div class="BBQ-background">
-                	<div class="BBQ-transparent">
-                        <a href="#page3.1">
-                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
-                        style="width:100%;">-->
-                        <ul>
-                            <li>
-                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
-                                 color:#097EF8; font-size:36px">
-                                 Main Dish</p><p>click here</p>
-                            </li>
-                        </ul></a>
-                    </div>
-                </div>
-				</li>
-			</ul>
-		    <ul>
-				<li>
-                <div class="salad-background">
-                	<div class="salad-transparent">
+		    <ul><!---->
+				<li><!---->
+                <div class="salad-background"><!---->
+                	<div class="salad-transparent"><!---->
                         <a href="#page4.1">
-                        <!--<img src="img/garlicbread.PNG" height="200" width="300"
-                        style="width:100%;">-->
-                        <ul>
-                            <li>
-                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
-                                 #14E399; font-size:36px">
-                                 Salad</p><p>click here</p>
-                            </li>
-                        </ul></a>
+                            <!--<img src="img/garlicbread.PNG" height="200" width="300"
+                            style="width:100%;">-->
+                            <ul>
+                                <li>
+                                     <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;
+                                     color:#14E399; font-size:36px">
+                                     	Salad
+                                     </p><!---->
+                                     <p>click here</p><!---->
+                                </li>
+                        	</ul>
+                        </a>
                     </div>
                 </div>
 				</li>
 			</ul>
-			<ul>
-				<li>
-                <div class="pizza-background">
-                	<div class="pizza-transparent">
-                        <a href="#page5.1">
+			<ul><!---->
+				<li><!---->
+                <div class="pizza-background"><!---->
+                	<div class="pizza-transparent"><!---->
+                        <a href="#page5.1"><!---->
                         <!--<img src="img/garlicbread.PNG" height="200" width="300"
                         style="width:100%;">-->
-                        <ul>
-                            <li>
-                                 <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
-                                 #0EE4F7; font-size:36px">
-                                 Pizza</p><p>click here</p>
-                            </li>
-                        </ul></a>
+                            <ul>
+                                <li>
+                                     <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif; 
+                                     color:#0EE4F7; font-size:36px"><!---->
+                                         Pizza
+                                     </p>
+                                     <p>click here</p>
+                                </li>
+                            </ul>
+                        </a>
                     </div>
                 </div>
 				</li>
 			</ul>
-			<ul>
-				<li>
-                <div class="dessert-background">
-                	<div class="dessert-transparent">
-                        <a href="#page6.1">
+			<ul><!---->
+				<li><!---->
+                <div class="dessert-background"><!---->
+                	<div class="dessert-transparent"><!---->
+                        <a href="#page6.1"><!---->
                         <!--<img src="img/garlicbread.PNG" height="200" width="300"
                         style="width:100%;">-->
-                        <ul>
-                            <li>
+                        <ul><!---->
+                            <li><!---->
                                  <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
-                                 #0F62F3; font-size:36px">
-                                 Dessert</p><p>click here</p>
+                                 #0F62F3; font-size:36px"><!---->
+                                 	Dessert
+                                 </p><!---->
+                                 <p>click here</p><!---->
                             </li>
-                        </ul></a>
+                        </ul>
+                        </a>
                     </div>
                 </div>
 				</li>
 			</ul>
-			<ul>
-				<li>
-                <div class="drinks-background">
-                	<div class="drinks-transparent">
-                        <a href="#page7.1">
+			<ul><!---->
+				<li><!---->
+                <div class="drinks-background"><!---->
+                	<div class="drinks-transparent"><!---->
+                        <a href="#page7.1"><!---->
                         <!--<img src="img/garlicbread.PNG" height="200" width="300"
                         style="width:100%;">-->
-                        <ul>
-                            <li>
+                        <ul><!---->
+                            <li><!---->
                                  <p style="font-family:Constantia, 'Lucida Bright', 'DejaVu Serif', Georgia, serif;color:
-                                 #F90CDA; font-size:36px">
-                                 Drinks</p><p>click here</p>
+                                 #F90CDA; font-size:36px"><!---->
+                                	 Drinks
+                                 </p><!---->
+                                 <p>click here</p>
                             </li>
-                        </ul></a>
+                        </ul>
+                        </a>
                     </div>
                 </div>
 				</li>
 			</ul>
 		</nav>
-
-	</div>
+	</div><!--(End)-Restaurant menu type content-->
 	<footer data-role="ui-footer">
 	</footer>
 </section>
 <!--End restaurant menu.-->
 
 <!--Start for appetizer menu.-->
-<section id="page2.1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="page2.1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-	<div data-role="ui-content" class="ui-content">
-		<nav data-role="navbar" class="bar-b button">
-			<strong><img src="img/spoons.png" alt="" width="30">Appetizer</strong><br><br>
-			
-			<ul>
-				<li><a href="#"><img src="img/appettizer1.PNG" height="180" width="120"
-					style="width:100%;"></a>
-				</li>
+	<div data-role="ui-content" class="ui-content"><!---->
+		<nav data-role="navbar" class="bar-b button"><!---->
+			<strong><img src="img/spoons.png" alt="" width="30">Appetizer</strong>
+            <!----><br><br>
+			<ul><!---->
 				<li>
-					1. Artichoke Bruschetta<br>Price: $8<a href="#page2.1.1">View Recipe</a>
-					<a href="#page2.1.1.1">Order Now</a>
+                	<a href="#"><!---->
+                		<img src="img/appettizer1.PNG" height="180" width="120" style="width:100%;"><!---->
+                    </a>
+				</li>
+				<li><!---->
+					1. Artichoke Bruschetta<br>Price: $8<a href="#page2.1.1">View Recipe</a><!---->
+					<a href="#page2.1.1.1">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
-			<ul>
-				<li><a href="#"><img src="img/garlicbread.PNG" height="180" width="120"
-					style="width:100%;"></a>
+			<ul><!---->
+				<li>
+                	<a href="#"><!---->
+                    	<img src="img/garlicbread.PNG" height="180" width="120" style="width:100%;"><!---->
+                    </a>
 				</li>
 				<li>
-					2. Garlic Bread<br><br>Price: $5<a href="#page2.1.2">View Recipe</a>
-					<a href="#page2.1.1.2">Order Now</a>
+					2. Garlic Bread<br><br>Price: $5<a href="#page2.1.2">View Recipe</a><!---->
+					<a href="#page2.1.1.2">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
-			<ul>
-				<li><a href="#"><img src="img/rumakii.PNG" height="180" width="120"
-					style="width:100%;"></a>
+			<ul><!---->
+				<li><a href="#"><!---->
+                	<img src="img/rumakii.PNG" height="180" width="120" style="width:100%;"><!---->
+                </a>
 				</li>
-				<li>
-					3. Rumaki with Pineapple<br>Price: $10<a href="#page2.1.3">View Recipe</a>
-					<a href="#page2.1.1.3">Order Now</a>
-				</li>
-			</ul>
-			<br>
-			<ul>
-				<li><a href="#"><img src="img/chickenwings.PNG" height="180" width="120"
-					style="width:100%;"></a>
-				</li>
-				<li>
-					4. Chicken Wings<br>Price: $11<a href="#page2.1.4">View Recipe</a>
-					<a href="#page2.1.1.4">Order Now</a>
+				<li><!---->
+					3. Rumaki with Pineapple<br>Price: $10<a href="#page2.1.3">View Recipe</a><!---->
+					<a href="#page2.1.1.3">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
-			<ul>
+			<ul><!---->
+				<li><a href="#">
+                		<img src="img/chickenwings.PNG" height="180" width="120" style="width:100%;"><!---->
+                    </a><!---->
+				</li>
+				<li>
+					4. Chicken Wings<br>Price: $11<a href="#page2.1.4">View Recipe</a><!---->
+					<a href="#page2.1.1.4">Order Now</a><!---->
+				</li>
+			</ul>
+			<br>
+			<ul><!---->
 				<li><a href="#"><img src="img/vegsamosa.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
-				<li>
-					5. Vegetable Samosa<br>Price: $6<a href="#page2.1.5">View Recipe</a>
-					<a href="#page2.1.1.5">Order Now</a>
-				</li>
-			</ul>
-			<br>
-			<ul>
-				<li><a href="#"><img src="img/musselsseafood.PNG" height="180" width="120"
-					style="width:100%;"></a>
-				</li>
-				<li>
-					6. Seafood Mussels<br>Price: $10<a href="#page2.1.6">View Recipe</a>
-					<a href="#page2.1.1.6">Order Now</a>
+				<li><!---->
+					5. Vegetable Samosa<br>Price: $6<a href="#page2.1.5">View Recipe</a><!---->
+					<a href="#page2.1.1.5">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
-			<ul>
-				<li><a href="#"><img src="img/prawnsaganaki.PNG" height="180" width="120"
-					style="width:100%;"></a></li>
-				<li>
-					7. Prawn Saganaki<br>Price: $7<a href="#page2.1.7">View Recipe</a>
-					<a href="#page2.1.1.7">Order Now</a>
+			<ul><!---->
+				<li><a href="#">
+                		<img src="img/musselsseafood.PNG" height="180" width="120" style="width:100%;">
+                    </a><!---->
+				</li>
+				<li><!---->
+					6. Seafood Mussels<br>Price: $10<a href="#page2.1.6">View Recipe</a><!---->
+					<a href="#page2.1.1.6">Order Now</a><!---->
+				</li>
+			</ul>
+			<br>
+			<ul><!---->
+				<li><a href="#"><!---->
+                		<img src="img/prawnsaganaki.PNG" height="180" width="120" style="width:100%;"></a>
+                </li>
+				<li><!---->
+					7. Prawn Saganaki<br>Price: $7<a href="#page2.1.7">View Recipe</a><!---->
+					<a href="#page2.1.1.7">Order Now</a><!---->
 				</li>
 			</ul>
 		</nav>
@@ -548,62 +691,62 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 <!--End for appetizer menu.-->
 
 <!--Start for main dish menu.-->
-<section id="page3.1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="page3.1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-	<div data-role="ui-content" class="ui-content">
-		<nav data-role="navbar" class="bar-b button">
-			<strong><img src="img/spoons.png" alt="" width="30">Main Dish</strong><br><br>
+	<div data-role="ui-content" class="ui-content"><!---->
+		<nav data-role="navbar" class="bar-b button"><!---->
+			<strong><img src="img/spoons.png" alt="" width="30">Main Dish</strong><br><br><!---->
 			
 			<ul>
 				<li><a href="#"><img src="img/lasagna.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
 					1. Best Lasagna<br><br>Price: $11<a href="#page3.1.1">View Recipe</a>
-					<a href="#pagemaindish1">Order Now</a>
+					<a href="#pagemaindish1">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/bbq.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
-					2. bbq ribs<br><br>Price: $18<a href="#page3.1.2">View Recipe</a>
+					2. bbq ribs<br><br>Price: $18<a href="#page3.1.2">View Recipe</a><!---->
 					<a href="#pagemaindish2">Order Now
-					</a>
+					</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/shrimpverde.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
 					3. Shrimp Verde<br><br>Price: $15<a href="#page3.1.3">View Recipe</a>
-					<a href="#pagemaindish3">Order Now</a>
+					<a href="#pagemaindish3">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/chickensoup.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
-					4. Chicken Soup<br><br>Price: $11<a href="#page3.1.4">View Recipe</a>
-					<a href="#pagemaindish4">Order Now</a>
+					4. Chicken Soup<br><br>Price: $11<a href="#page3.1.4">View Recipe</a><!---->
+					<a href="#pagemaindish4">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/Ribeyesteak.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
-					5. Rib-eye steak<br><br>Price: $20<a href="#page3.1.5">View Recipe</a>
-					<a href="#pagemaindish5">Order Now</a>
+					5. Rib-eye steak<br><br>Price: $20<a href="#page3.1.5">View Recipe</a><!---->
+					<a href="#pagemaindish5">Order Now</a><!---->
 				</li>
 			</ul>
 		</nav>
@@ -614,42 +757,42 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 <!--End for main dish menu.-->
 
 <!--Start for salad menu.-->
-<section id="page4.1" data-role="page">
+<section id="page4.1" data-role="page"><!---->
 	<header data-role="header">
 		<h1 style="text-align:center">Restaurant</h1>
 	</header>
-	<div data-role="ui-content" class="ui-content">
-		<nav data-role="navbar" class="bar-b button">
+	<div data-role="ui-content" class="ui-content"><!---->
+		<nav data-role="navbar" class="bar-b button"><!---->
 			<strong><img src="img/spoons.png" alt="" width="30">Salad</strong><br><br>
 			
 			<ul>
 				<li><a href="#"><img src="img/craneberryspinachesalad.PNG" height="180" 
-					width="120" style="width:100%;"></a>
+					width="120" style="width:100%;"></a><!---->
 				</li>
 				<li>
 					1. Crane-berry spinache salad<br>Price: $8<a href="#page4.1.1">View Recipe
 					</a>
-					<a href="#pagesalad1">Order Now</a>
+					<a href="#pagesalad1">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/greeksalad.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
-					2. Greek salad<br><br>Price: $8<a href="#page4.1.2">View Recipe</a>
-					<a href="#pagesalad2">Order Now</a>
+					2. Greek salad<br><br>Price: $8<a href="#page4.1.2">View Recipe</a><!---->
+					<a href="#pagesalad2">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/gardensalad.PNG" height="180" width="120"
-					style="width:100%;"></a>
+					style="width:100%;"></a><!---->
 				</li>
 				<li>
-					3. Garden salad<br><br>Price: $8<a href="#page4.1.3">View Recipe</a>
-					<a href="#pagesalad3">Order Now</a>
+					3. Garden salad<br><br>Price: $8<a href="#page4.1.3">View Recipe</a><!---->
+					<a href="#pagesalad3">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
@@ -658,18 +801,18 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 					style="width:100%;"></a>
 				</li>
 				<li>
-					4. Spicy Italian salad<br><br>Price: $8<a href="#page4.1.4">View Recipe</a>
-					<a href="#pagesalad4">Order Now</a>
+					4. Spicy Italian salad<br><br>Price: $8<a href="#page4.1.4">View Recipe</a><!---->
+					<a href="#pagesalad4">Order Now</a><!---->
 				</li>
 			</ul>
 			<br>
 			<ul>
 				<li><a href="#"><img src="img/potatosalad.PNG" height="180" width="120"
-				 	style="width:100%;"></a>
+				 	style="width:100%;"></a><!---->
 				</li>
 				<li>
-					5. Potato salad<br><br>Price: $8<a href="#page4.1.5">View Recipe</a>
-					<a href="#pagesalad5">Order Now</a>
+					5. Potato salad<br><br>Price: $8<a href="#page4.1.5">View Recipe</a><!---->
+					<a href="#pagesalad5">Order Now</a><!---->
 				</li>
 			</ul>
 		</nav>
@@ -868,18 +1011,18 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 
 <!--Start of appetizer recipes .-->
 <!--Start recipe for Artichoke Bruschetta.-->
-<section id="page2.1.1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="page2.1.1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-	<div data-role="ui-content" class="ui-content">
-		<nav data-role="navbar" class="bar-b button">	
-			<ul>
+	<div data-role="ui-content" class="ui-content"><!---->
+		<nav data-role="navbar" class="bar-b button"><!---->	
+			<ul><!---->
 				<li><img src="img/appettizer1.PNG" height="400" width="270"
-					style="width:100%;">
+					style="width:100%;"><!---->
 				</li>
 			</ul>
-			<ul>
+			<ul><!---->
 				<li><p>1 (6.5 ounce) jar marinated artichoke hearts, drained and chopped.</p>
 				</li>
 			</ul>
@@ -2258,20 +2401,19 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 
 <!--Start order option for appettizers--->
 <!--Start order option for Artichoke Bruschetta.-->
-<section id="page2.1.1.1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
-	</header>
-		<div data-role="ui-content" class="ui-content">
-			<nav data-role="navbar" class="bar-b button">	
-				
-				<form id="myform" action="formprocessor.php" method="post">
-					<div data-role="fieldcontain">
+<section id="page2.1.1.1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
+	</header><!---->
+		<div data-role="ui-content" class="ui-content"><!---->
+			<nav data-role="navbar" class="bar-b button">	<!---->
+				<form id="myform" action="formprocessor.php" method="post"><!---->
+					<div data-role="fieldcontain"><!---->
                     	<label for="choice">Your food choice:</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
-                        <h3>Order option</h3>
-						<label for="How-many">How many serving?</label><br>
-							<select id="select-quantity1" name="select-quantity1">
-								<option value="">1</option>
+                        <h3>Order option</h3><!---->
+						<label for="How-many">How many serving?</label><br><!---->
+							<select id="select-quantity1" name="select-quantity1"><!---->
+								<option value="">1</option><!---->
 								<option value="">2</option>
 								<option value="">3</option>
 								<option value="">4</option>
@@ -2283,18 +2425,18 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 								<option value="">10</option>
 						</select>
 						<br><br>
-						<label for="How-many">Select Your Size:</label><br>
-						<select id="select-size1" name="select-size1">
-								<option value="">Small $8</option>
+						<label for="How-many">Select Your Size:</label><br><!---->
+						<select id="select-size1" name="select-size1"><!---->
+								<option value="">Small $8</option><!---->
 								<option value="">Large $12</option>
 					</select>
 					</div>
-					<a><span><img src="img/shopping-cart.png" width="" height=""> Add</span></a>
+					<a><span><img src="img/shopping-cart.png" width="" height=""> Add</span></a><!---->
 					<!-- <input type="submit" value="Add to cart" data-inline="true" data-icon=""> -->
-					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a>
+					<a href="#pagepaynow1" data-role="button" data-icon="">Pay Now</a><!---->
                    <ul>
                         <li>
-                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the store</a><br><br>
+                           <a href="#unpaidorderitemcheck1" name="" >Pay when I arrive to the store</a><br><br><!---->
                         </li>
                     </ul>
 				</form>
@@ -2975,7 +3117,6 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 	</header>
 		<div data-role="ui-content" class="ui-content">
 			<nav data-role="navbar" class="bar-b button">	
-				
 				<form id="myform" action="formprocessor.php" method="post">
 					<div data-role="fieldcontain">
                     	<label for="choice">Your food choice:</label><br><br><!--Once user click order now the food name will show under the label of "your food choice. For example user click "order now" from Artichoke Bruschetta from the menu list, this food name will come up under the label "Your food choice: Artichoke Bruschetta. This helps user reminds them about their order in any case. Codes will be implemented to achieve the feature.-->
@@ -3953,42 +4094,40 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 <!--End order option for drinks.--->
 
 <!--Start payment details.-->
-<section id="pagepaynow1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="pagepaynow1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-		<div data-role="ui-content" class="ui-content">
-			<nav data-role="navbar" class="bar-b button">	
-				
-				<form id="" action="#" method="#">
-                <label for="">You ordered the following:</label><br><br>
-                       <nav data-role="navbar" class="bar-b button">
-                        
-                        <ul>
-                        <li>
-                        <p  style="color:#1CF30C">Click Yes if your order is correct</p>
-                        <p style="color:#EC0509">Click Delete if your order is wrong</p>
-                        <p>Example Item #1</p>
-                        </li>
+		<div data-role="ui-content" class="ui-content"><!---->
+			<nav data-role="navbar" class="bar-b button"><!---->
+				<form id="" action="#" method="#"><!---->
+                <label for="">You ordered the following:</label><!----><br><br>
+                       <nav data-role="navbar" class="bar-b button"><!---->
+                        <ul><!---->
+                            <li><!---->
+                                <p  style="color:#1CF30C">Click Yes if your order is correct</p><!---->
+                                <p style="color:#EC0509">Click Delete if your order is wrong</p><!---->
+                                <p>Example Item #1</p><!---->
+                            </li>
                         </ul>
-                        <ul> 
-                       
-                        	<li>
+                        <ul> <!---->
+                        	<li><!---->
                             	 <input value="Yes" type="button"/> 
                              </li>
-                             <li>
-                             	<input name="delete" value="delete" type="reset" size="20"><br><br>
+                             <li><!---->
+                             	<input name="delete" value="delete" type="reset" size="20"><!----><br><br>
                              </li>
                        </ul>
-                       <ul>
-                             <li>
+                       <ul><!---->
+                             <li><!---->
                              	<textarea placeholder="You can enter you comment for your order here..."></textarea>
+                                <!---->
                              </li>
                         </ul><br>
-                         <ul>
-                             <li>
-                           		  <label for="">Select pick up time:</label>
-                                  <label style="color:#F7060A">
+                         <ul><!---->
+                             <li><!---->
+                           		  <label for="">Select pick up time:</label><!---->
+                                  <label style="color:#F7060A"><!---->
                                       Please allow 30 mins of wait from the time the ordered item 
                                       is paid! Selected time will not be accurate as there other customers to proccessed. 
                                       It is only used to estimate preparation time. So please estimate the time to
@@ -3997,9 +4136,9 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
                              </li>
                           </ul>
                           <ul>
-                             <li>
-							<select id="hour1" name="hour">
-                            	<option value="">Select hour</option>
+                             <li><!---->
+							<select id="hour1" name="hour"><!---->
+                            	<option value="">Select hour</option><!---->
                             	<option value="">1:00</option>
 								<option value="">2:00</option>
 								<option value="">3:00</option>
@@ -4014,9 +4153,9 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 								<option value="">12:00</option>
 							</select>
                             </li>
-                            <li>  
-                            <select id="min1" name="min">
-                            	<option value="">Select minutes</option>
+                            <li><!---->  
+                            <select id="min1" name="min"><!---->
+                            	<option value="">Select minutes</option><!---->
                             	<option value="">00</option>
 								<option value="">01</option>
 								<option value="">02</option>
@@ -4070,33 +4209,37 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 							</select>
 							</select> 
                              </li>
-                             <li>
-                             <select id="pmam" name="pmam">
-                            	<option value="">Select</option>
+                             <li><!---->
+                             <select id="pmam" name="pmam"><!---->
+                            	<option value="">Select</option><!---->
                             	<option value="">am</option>
 								<option value="">pm</option>
 							
 							</select>
                              </li>
                         </ul>
-                        </nav>
-					<div data-role="fieldcontain">
-						<h3>Please Enter Payment Details</h3>
-						<label for="">Enter Card Holder Name:</label><br>
-						<input name="cardname" value="" type="text" size="20"><br><br>
+                        </nav><!---->
+					<div data-role="fieldcontain"><!---->
+						<h3>Please Enter Payment Details</h3><!---->
+						<label for="">Enter Card Holder Name:</label><!----><br>
+                            <input name="cardname" value="" type="text" size="20"><!---->
+                            <br><br>
 						<label for="">Enter Card Number:</label><br>
-						<input name="cardname" value="" type="text" size="20" style="color:
-#FFFFFF"><br><br>
+                            <input name="cardname" value="" type="text" size="20" style="color: #FFFFFF">
+                            <!---->
+                            <br><br>
 						<label for="">Enter Code: 
-							
- <a href="#email-dialog" data-rel="dialog">(what is this?)</a></label><br><br>
-						<input name="cardname" value="" type="text" size="20" ><br><br><br>
-						<label for="">Enter Bank Name:</label><br>
-						
-						<input name="cardname" value="" type="text" size="20"><br><br>
-						<label for="">Month expired:</label><br>
-							<select id="expiry" name="expiry">
-                            	<option value="">Select</option>
+ 							<a href="#email-dialog" data-rel="dialog">(what is this?)</a></label>
+                            <!----><br><br>
+							<input name="cardname" value="" type="text" size="20" >
+                            <!----><br><br><br>
+						<label for="">Enter Bank Name:</label><!---->
+                        	<br>
+							<input name="cardname" value="" type="text" size="20"><!---->
+                            <br><br>
+						<label for="">Month expired:</label><br><!---->
+							<select id="expiry" name="expiry"><!---->
+                            	<option value="">Select</option><!---->
 								<option value="">01Jan</option>
 								<option value="">02Feb</option>
 								<option value="">03Mar</option>
@@ -4110,9 +4253,9 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 								<option value="">11Nov</option>
 								<option value="">12Dec</option>
 						</select><br><br>
-						<label for="">Year expired:</label><br>
-						<select id="expiry" name="expiry">
-                        		<option value="">Select</option>
+						<label for="">Year expired:</label><!----><br>
+						<select id="expiry" name="expiry"><!---->
+                        		<option value="">Select</option><!---->
 								<option value="">2015</option>
 								<option value="">2016</option>
 								<option value="">2017</option>
@@ -4130,9 +4273,9 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 								<option value="">2029</option>
 								<option value="">2030</option>
 						</select><br><br><br><br>
-                       	<ul>
-                        	<li>
-                                <a href="#pagereceipt1" class=" ui-btn-corner-all">Submit Payment</a>
+                       	<ul><!---->
+                        	<li><!---->
+                                <a href="#pagereceipt1" class=" ui-btn-corner-all">Submit Payment</a><!---->
                             </li>
                         </ul>
 					</div>
@@ -4145,148 +4288,148 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 <!--End payment details.--> 
 
 <!--Start pop image for credit card cvv number.--> 
-<div data-role="page" id="email-dialog">
-     <div data-role="header">
-    	 <h1>Credit Card CVV number</h1>
+<div data-role="page" id="email-dialog"><!---->
+     <div data-role="header"><!---->
+    	 <h1>Credit Card CVV number</h1><!---->
      </div>
-     <div data-role="content" data-theme="d">
-        <p>See CVV number on the right side of the card!</p> 
-        <p>You can close this image by clicking the X button on the top left side of the image!</p>
-         <img src="img/cvv.PNG" style="width:100%;height:100%;" alt="Credit Card CVV">
+     <div data-role="content" data-theme="d"><!---->
+        <p>See CVV number on the right side of the card!</p> <!---->
+        <p>You can close this image by clicking the X button on the top left side of the image!</p><!---->
+        	 <img src="img/cvv.PNG" style="width:100%;height:100%;" alt="Credit Card CVV"><!---->
       </div>
 </div>
 <!--End pop image for credit card cvv number.--> 
  
 
 <!--Start unpaid order item check.-->
-<section id="unpaidorderitemcheck1" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="unpaidorderitemcheck1" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-		<div data-role="ui-content" class="ui-content">
-			<nav data-role="navbar" class="bar-b button">	
-				
-				<form id="" action="#" method="#">
-                <label for="">You ordered the following:</label><br><br>
-                       <nav data-role="navbar" class="bar-b button">
-                        <ul>
-                        <li>
-                        <p  style="color:#1CF30C">Click Yes if your order is correct</p>
-                        <p style="color:#EC0509">Click Delete if your order is wrong</p>
-                        <p>Example Item #1</p>
-                        </li>
+		<div data-role="ui-content" class="ui-content"><!---->
+			<nav data-role="navbar" class="bar-b button"><!---->
+				<form id="" action="#" method="#"><!---->
+                <label for="">You ordered the following:</label><!---->
+                	<br><br>
+                       <nav data-role="navbar" class="bar-b button"><!---->
+                        <ul><!---->
+                            <li><!---->
+                                <p  style="color:#1CF30C">Click Yes if your order is correct</p><!---->
+                                <p style="color:#EC0509">Click Delete if your order is wrong</p><!---->
+                                <p>Example Item #1</p><!---->
+                            </li>
                         </ul>
-                        <ul> 
-                        	<li>
-                             	<input value="Yes" type="button"/> 
+                        <ul><!---->
+                        	<li><!---->
+                             	<input value="Yes" type="button"/> <!---->
                              </li>
-                             <li>
-                            	 <input name="delete" value="delete" type="reset" size="20"><br><br>
+                             <li><!---->
+                            	 <input name="delete" value="delete" type="reset" size="20"><!---->
+                                 <br><br>
                              </li>
                       	</ul>
-                        <ul>
-                             <li>
+                        <ul><!---->
+                             <li><!---->
                         	     <textarea placeholder="You can enter you comment for your order here..."></textarea>
                              </li>
                          </ul>
-                          <ul>
+                          <ul><!---->
                              <li>
-                        	     <a href="#pagereceipt-unpaid">Get order number and receipt now</a>
+                        	     <a href="#pagereceipt-unpaid">Get order number and receipt now</a><!---->
                              </li>
                          </ul>
                         </nav>
-                        </form>
-                        </nav>
-		</div>
+                   </form>
+              </nav>
+		 </div>
 	<footer data-role="ui-footer"><h1></h1></footer>
 </section>
 <!--End unpaid order item check.-->
                         
 
 <!--Start ordered receipt.-->
-<section id="pagereceipt1" data-role="page">
+<section id="pagereceipt1" data-role="page"><!--(Start) order receipt section page, this page creates the receipt after customer gets an order number or pay for order-->
 	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+		<h1 style="text-align:center">Restaurant</h1><!--header title-->
 	</header>
-		<div data-role="ui-content" class="ui-content">
-			<nav data-role="navbar" class="bar-b button">
-            	 <ul>
-                     <li>
+		<div data-role="ui-content" class="ui-content"><!--(start) receipt content-->
+			<nav data-role="navbar" class="bar-b button"><!--(start) navbar to ceate responsive content-->
+            	 <ul><!--ul 1-->
+                     <li><!--li 1-->
                          <label>Here is your receipt: </label>
                      </li>
                   </ul>
-                  <ul>
-                     <li>
-                       <label>Your order number: </label>
+                  <ul><!--ul 2-->
+                     <li><!--li 2-->
+                       <label>Your order number: </label><!--label for order number which will show below, codes will be created to show the sequence order number-->
                      </li>
                  </ul>
                  <hr><br><br><br><br>
-                  <ul>
-                     <li>
-                      <hr>
-                     <label style="background-color:#6AF91C">Paid items: </label>
+                  <ul><!--ul 3-->
+                     <li><!--li 3-->
+                          <hr>
+                         <label style="background-color:#6AF91C">Paid items: </label><!--Label for pai items-->
                      </li>
                  </ul>
                   <hr><br><br><br><br><hr>
-                  <ul>
-                     <li>
-                     <label>Total Price: </label>
+                  <ul><!--ul 4-->
+                     <li><!--li 4-->
+                    	 <label>Total Price: </label><!---->
                      </li>
                  </ul>
                   <hr><br><br><br><br><hr>
-			</nav>
-		</div>
+			</nav><!--(End) navbar to ceate responsive content-->
+		</div><!--(End) receipt content-->
 	<footer data-role="ui-footer"><h1></h1></footer>
-</section>
+</section><!--(End) order receipt section page, id=pagereceipt1-->
 <!--End  ordered receipt.-->
 
 <!--Start unpaid ordered receipt.-->
-<section id="pagereceipt-unpaid" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="pagereceipt-unpaid" data-role="page"><!---->
+	<header data-role="header"><!---->
+		<h1 style="text-align:center">Restaurant</h1><!---->
 	</header>
-		<div data-role="ui-content" class="ui-content">
-			<nav data-role="navbar" class="bar-b button">
-            	 <ul>
-                     <li>
-                          <label>Here is your receipt: </label>
+		<div data-role="ui-content" class="ui-content"><!---->
+			<nav data-role="navbar" class="bar-b button"><!---->
+            	 <ul><!---->
+                     <li><!---->
+                          <label>Here is your receipt: </label><!---->
                      </li>
                   </ul>
-                  <ul>
-                     <li>
+                  <ul><!---->
+                     <li><!---->
                           <label>Bring this receipt to the restaurant and pay, so we can prepare your ordered items or 
                          click "pay for this order now" on the buttom of this page and we will start preparing your order. 
-                         </label>
+                         </label><!---->
                      </li>
                   </ul>
-                  <ul>
-                     <li><hr>
-                      <label>Your order number: </label>
+                  <ul><!---->
+                     <li><!----><hr>
+                     	 <label>Your order number: </label><!---->
                      </li>
                  </ul>
                  <hr><br><br><br><br> <hr>
                  <ul>
                      <li>
-                       <label>Unpaid items will not be prepared until its paid! </label>
+                       	 <label>Unpaid items will not be prepared until its paid! </label><!---->
                      </li>
                  </ul>
                   <ul>
                      <li>
-                     
                        <label style="background-color: #F86E6E;">Unpaid items: </label>
                      </li>
                  </ul>
                  
                   <hr><br><br><br><br><hr>
                   <ul>
-                     <li>
-                       <label>Total Price: </label>
+                     <li><!---->
+                       <label>Total Price: </label><!---->
                      </li>
                  </ul>
                   <hr><br><br><br><br><hr>
                  <ul>
-                     <li>
-                      <a href="#pagepaynow1">Pay for this order now</a>
+                     <li><!---->
+                      <a href="#pagepaynow1">Pay for this order now</a><!---->
                      </li>
                  </ul>
 			</nav>
@@ -4296,28 +4439,30 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 <!--End  unpaid ordered receipt.-->
 
 <!--Start gallery restaurant photos.-->
-<section id="page5" data-role="page">
-	<header data-role="header">
-		<h1 style="text-align:center">Restaurant</h1>
+<section id="page5" data-role="page"><!--(Start) gallery section page-->
+	<header data-role="header"><!--header-->
+		<h1 style="text-align:center">Restaurant</h1><!--header title-->
 	</header>
-<div data-role="ui-content" class="ui-content">
-	<nav data-role="navbar" class="bar-b button">
-		<strong><img src="img/photo.png" alt="" width="30" style="color:#27827B">
-        Gallery</strong><br><br>
-		<ul>
+<div data-role="ui-content" class="ui-content"><!---->
+	<nav data-role="navbar" class="bar-b button"><!---->
+		<strong><img src="img/photo.png" alt="" width="30" style="color:#27827B"><!--icon for title page-->
+        Gallery</strong><!--Page title-->
+        <br><br>
+		<ul><!--ul number 1-->
 			<li><a href="" ><img src="img/restaurantInterior3.PNG" alt="" width="100" height="80"></a></li>
+            <!--example image of the retaurant gallery, same as the images below-->
 			<li><a><img src="img/restaurantInterior1.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior2.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior4.PNG" alt="" width="100" height="80"></a></li>
 		</ul>
-			<ul>
+		 <ul><!--2-->
 			<li><a><img src="img/restaurantInterior5.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior6.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior7.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantInterior8.PNG" alt="" width="100" height="80"></a></li>
 		</ul>
 		</ul>
-			<ul>
+		<ul>!--3-->
 			<li><a><img src="img/restaurantVeranda5.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantbar.PNG" alt="" width="100" height="80"></a></li>
 			<li><a><img src="img/restaurantriverview.PNG" alt="" width="100" height="80"></a></li>
@@ -4325,9 +4470,9 @@ background-attachment:fixed;-webkit-background-size: 100%;-moz-background-size: 
 		</ul>
 	</nav>
 </div>
-<footer data-role="ui-footer">
-</footer>
+    <footer data-role="ui-footer">
+    </footer>
 </section>
 <!--End gallery restaurant photos.-->
-</body>
-</html>
+</body><!--End body of the html page-->
+</html><!--End html-->

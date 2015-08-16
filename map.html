@@ -1,15 +1,46 @@
+<!--
+-------This is an external page of the restaurant app (page map.html)------
+Student name: Mark Serdina
+ID: 213145792  
 
-<!DOCTYPE HTML>
-<html lang="fr">
+Assignment 1 - Project 1 Restaurant Application
+Unit name: Mobile Computing
+Unit Code: SIT313
+
+Deakin University 
+
+Trimister 2, 2015 
+
+Due Date: 16/8/2015              
+-->
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta charset="utf-8">
-<title>Google Maps</title>
-<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.css" />
-<script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
-<script src="http://code.jquery.com/mobile/1.0a4.1/jquery.mobile-1.0a4.1.min.js"></script>
-<style>#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }</style>
-<script>
-$( document ).on( "pageinit", "#map-page", function() {
+  <meta charset="utf-8">
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+
+  <style>#map-page, #map-canvas { width: 100%; height: 100%; padding: 0; }</style>
+ 
+  
+</head>
+
+<body>
+<section data-role="page" id="map-page">
+    <div data-role="header" data-theme="a">
+    <h1>Restaurant Map </h1>
+    </div>
+    <p style="color:#E90B0F">If map not showing refresh the page to view map</p>
+    <div role="main" class="ui-content" id="map-canvas">
+        <!-- map loads here... -->
+    </div>
+</section>
+
+ <script>
+   $( document ).on( "pageinit", "#map-page", function() {
     var defaultLatLng = new google.maps.LatLng(34.0983425, -118.3267434);  // Default to Hollywood, CA when no geolocation support
     if ( navigator.geolocation ) {
         function success(pos) {
@@ -39,16 +70,8 @@ $( document ).on( "pageinit", "#map-page", function() {
         });
     }
 });
-</script>
-</head>
-<body>
-<div data-url="map-page" data-role="page" id="map-page">
-    <div data-role="header" data-theme="a">
-    <h1>Maps</h1>
-    </div>
-    <div role="main" class="ui-content" id="map-canvas">
-        <!-- map loads here... -->
-    </div>
-</div>
+  </script>
 </body>
+
 </html>
+
