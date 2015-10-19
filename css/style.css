@@ -2,15 +2,118 @@
 /* CSS Document */
 
 /*===============================================*/	
-.homepage{
-background: url(img/bg.PNG) no-repeat center center;
-background-attachment:fixed;
--webkit-background-size: 100%; 
--moz-background-size: 100%;
--o-background-size: 100%;
-background-size: 100%;
--webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover; 
-background-size: cover;
+
+
+
+.image{
+	width: inherit;	
 }
+
+/*resize images in the homepage to 50 pexils when view on desktops*/
+@media screen and (min-width: 1024px){
+	.image{
+			width: 50px;	
+	} 
+}
+/*resize images in the homepage to 50 pexils when view on ipads*/
+@media screen and (min-width: 800px) and (max-width: 1023px){ 
+	.image{
+			width: 50px;	
+	} 
+}
+/*resize images in the homepage to 50 pexils when view on smartphones*/
+@media screen and (max-width: 799px){ 
+	.image{
+			width: 50px;	
+	} 
+}
+/*make the size of all the icons in the homepage small in any device*/
+@media screen and (min-width: 380px){ 
+	.icon-size{
+		width: 50px;
+		text-align:center;
+	}
+}
+
+.ui-header-fullscreen{
+	background-image:url(rest.PNG)
+	}
+
+/******Start Home page menu styling*****/ 
+/******Start pop up text and transparent for feedback*****/ 
+#myPanel .text {position:relative;bottom:30px;left:0px;visibility:hidden;}
+
+/***Hover***/
+#myPanel:hover .text {visibility:visible;}
+
+/***Transparent***/
+div.transbox
+{  margin: 30px 0px; background-color:#ffffff;border:1px solid black;opacity:0.6;filter:alpha(opacity=60);
+/* For IE8 and earlier */}
+
+/***Transparent***/
+div.transbox p
+{margin: 5%;font-weight:bold;color: #000000;}
+/******End pop up text and transparent for feedback*****/ 
+
+/******Start feedback image styling*****/ 
+div.background{background: url(img/fback.PNG);border: 0px solid black;width:250px;height:350px;}
+/******Start feedback image styling*****/ 
+/******End Home page menu styling*****/ 
+/****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for garlic bread image background styling (menu appetizer)*****/ 
+div.garlic-background{ background: url(img/garlicbread.PNG) fixed  ;width:100%;height:500px; background-size:100%;}
+/******End  for garlic bread image background styling (menu appetizer)*****/ 
+
+/******Start  appetizer text and transparent styling*****/ 
+div.garlic-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End  appetizer transparent and text styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for BBQ image background styling (menu main dish)*****/ 
+div.BBQ-background{background:url(img/bbq.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for BBQ image background styling (menu main dish)*****/ 
+
+/******Start main dish text and transparent styling*****/ 
+div.BBQ-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End main dish text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for salad image background styling (menu salad)*****/ 
+div.salad-background{background:url(img/greeksalad.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for salad image background styling (menu salad)*****/ 
+
+/******Start salad text and transparent styling*****/ 
+div.salad-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End salad text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for pizza image background styling (menu pizza)*****/ 
+div.pizza-background{background:url(img/supremepizza.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu pizza)*****/ 
+
+/******Start pizza text and transparent styling*****/ 
+div.pizza-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End pizza text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for dessert image background styling (menu dessert)*****/ 
+div.dessert-background{background:url(img/yumydessert.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu dessert)*****/ 
+
+/******Start dessert text and transparent styling*****/ 
+div.dessert-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End dessert text and transparent styling*****/ /****************************************************************************************************************/
+
+/****************************************************************************************************************/
+/******Start for drinks image background styling (menu drinks)*****/ 
+div.drinks-background{background:url(img/drinks.PNG)fixed;width:100%;height:500px; background-size:100%;}
+/******End  for pizza image background styling (menu dessert)*****/ 
+
+/******Start drinks text and transparent styling*****/ 
+div.drinks-transparent{background-color:#ffffff;opacity:0.6;filter:alpha(opacity=60); /* For IE8 and earlier */}
+/******End drinks text and transparent styling*****/ /****************************************************************************************************************/
+
+.page-map, .ui-content, #map-canvas { width: 100%; height: 100%; padding: 0; }

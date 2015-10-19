@@ -1,0 +1,20 @@
+drop table restaurantuser;
+
+create table restaurantuser
+(ID NUMBER(10) NOT NULL,
+Username VARCHAR2(50) NOT NULL,
+Firstname VARCHAR2(50),
+Lastname VARCHAR2(50),
+Password VARCHAR2(35) NOT NULL, 
+Email VARCHAR2(50),
+Phone VARCHAR2(50),
+StreetNumber VARCHAR2(10),
+StreetName VARCHAR2(50),
+Suburb VARCHAR2(40),
+City VARCHAR2(40),
+State VARCHAR2(40),
+Country VARCHAR2(40),
+Primary key(ID)
+);
+
+commit;

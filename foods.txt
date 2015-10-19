@@ -1,0 +1,51 @@
+
+drop table foods;
+
+
+CREATE TABLE foods
+    ( ID NUMBER(14) NOT NULL,
+	FOODNAME VARCHAR2(100),
+	COOKINGTIME VARCHAR2(100),
+	IMAGE VARCHAR2(100),
+    PRICE  DECIMAL(10,2), 
+    AVAILABILTY VARCHAR2(80),
+	LINK VARCHAR2(80),
+	Primary key (ID)
+     );  
+
+INSERT INTO foods VALUES (1,'Artichoke Bruschetta','8 mins','appettizer1.PNG','8','breakfast and Lunch','#page2.1.1');
+
+INSERT INTO foods VALUES (2,'Garlic Bread','5 mins','garlicbread.PNG','5','Lunch and Dinner','#page2.1.2');
+INSERT INTO foods VALUES (3,'Rumaki with Pineapple','30 mins','rumakii.PNG','10','Lunch and Dinner','#page2.1.3');
+INSERT INTO foods VALUES (4,'Chicken Wings','30 mins','chickenwings.PNG','11','Lunch and Dinner','#page2.1.4');
+INSERT INTO foods VALUES (5,'Vegetable Samosa','20 mins','vegsamosa.PNG','6','Lunch and Dinner','#page2.1.5');
+INSERT INTO foods VALUES (6,'Seafood Mussels','10 mins','musselsseafood.PNG','10','Lunch and Dinner','#page2.1.6');
+INSERT INTO foods VALUES (7,'Prawn Saganaki','30 mins','prawnsaganaki.PNG','7','Lunch and Dinner','#page2.1.7');
+INSERT INTO foods VALUES (8,'Best Lasagna','1 hour','lasagna.PNG','11','Lunch and Dinner','#page3.1.1');
+INSERT INTO foods VALUES (9,'bbq ribs','30 mins','bbq.PNG','18','Lunch and Dinner','#page3.1.2');
+INSERT INTO foods VALUES (10,' Shrimp Verde','30 mins','shrimpverde.PNG','15','Lunch and Dinner','#page3.1.3');
+INSERT INTO foods VALUES (11,' Chicken Soup','1 hour','chickensoup.PNG','11','Lunch and Dinner','#page3.1.4');
+INSERT INTO foods VALUES (12,'Rib-eye steak','20 mins','Ribeyesteak.PNG','20','Lunch and Dinner','#page3.1.5');
+INSERT INTO foods VALUES (13,'Crane-berry spinache salad','20 mins','craneberryspinachesalad.PNG','8','Lunch and Dinner','#page4.1.1');
+INSERT INTO foods VALUES (14,'Greek salad','20 mins','greeksalad.PNG','8','Lunch and Dinner','#page4.1.2');
+INSERT INTO foods VALUES (15,' Garden salad','20 mins','gardensalad.PNG','8','Lunch and Dinner','#page4.1.3');
+INSERT INTO foods VALUES (16,'Spicy Italian salad','20 mins','italiansalad.PNG','8','Lunch and Dinner','#page4.1.4');
+INSERT INTO foods VALUES (17,'Potato salad','20 mins','potatosalad.PNG','8','Lunch and Dinner','#page4.1.5');
+INSERT INTO foods VALUES (18,'Meat Lovers','20 mins','meatloverspizza.PNG','12','Lunch and Dinner','#page5.1.1');
+INSERT INTO foods VALUES (19,'Haiwaiian','20 mins','hawaiianpizza.PNG','12','Lunch and Dinner','#page5.1.2');
+INSERT INTO foods VALUES (20,'Americano','20 mins','americanopizza.PNG','12','Lunch and Dinner','#page5.1.3');
+INSERT INTO foods VALUES (21,' Margarita','20 mins','margaritapizza.PNG','12','Lunch and Dinner','#page5.1.4');
+INSERT INTO foods VALUES (22,'Supreme ','20 mins','supremepizza.PNG','12','Lunch and Dinner','#page5.1.5');
+INSERT INTO foods VALUES (23,' Healthy sundae','15 mins','healthysundae.PNG','6','Lunch and Dinner','#page6.1.1');
+INSERT INTO foods VALUES (24,' Strawberry smoothies','15 mins','strawberrysmootthies.PNG','6','Lunch and Dinner','#page6.1.2');
+INSERT INTO foods VALUES (25,'Stewed quince dessert','15 mins','stewedquincedessert.PNG','7','Lunch and Dinner','#page6.1.3');
+INSERT INTO foods VALUES (26,'Mango dessert','15 mins','mangodessert.PNG','5','Lunch and Dinner','#page6.1.3');
+INSERT INTO foods VALUES (27,' Mango ice cream','15 mins','mangoicecream.PNG','7','Lunch and Dinner','#page6.1.5');
+INSERT INTO foods VALUES (28,'Bloody mary','10 mins','bloddymarydrink.PNG','10','Lunch and Dinner','#page7.1.1');
+INSERT INTO foods VALUES (29,' Vodka','10 mins','vodka.PNG','10','Lunch and Dinner','#page7.1.2');
+INSERT INTO foods VALUES (30,'Sangria','10 mins','sangria.PNG','10','Lunch and Dinner','#page7.1.3');
+INSERT INTO foods VALUES (31,'Gin martini','10 mins','ginmartini.PNG','10','Lunch and Dinner','#page7.1.4');
+INSERT INTO foods VALUES (32,' Virgin cocumber mojito','10 mins','virgincocumbermojito.PNG','10','Lunch and Dinner','#page7.1.5');
+
+
+commit;

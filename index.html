@@ -23,10 +23,13 @@ Due Date: 16/8/2015
 <link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />--Theme roller styling. Hosted privately-->
 
 
-
-<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" /><!--External CSS hosted privately-->
-<script src="jquery-1.11.1.min.js"></script><!--External javascript hosted privately-->
-<script src="jquery.mobile-1.4.5.min.js"></script><!--External javascript hosted privately-->
+<!--
+<link rel="stylesheet" href="jquery.mobile-1.4.5.min.css" />--><!--External CSS hosted privately-->
+<!--<script src="jquery-1.11.1.min.js"></script>--><!--External javascript hosted privately-->
+<!--<script src="jquery.mobile-1.4.5.min.js"></script>--><!--External javascript hosted privately-->
+      <link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.css">
+      <script src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+      <script src="http://code.jquery.com/mobile/1.0a4/jquery.mobile-1.0a4.min.js"></script>
 <!--(Start)---Files are hosted privately-->
 
 
@@ -4500,7 +4503,7 @@ pop up transparent box for feed back: question, enter feedback and view all feed
 	</header>
 		<div data-role="ui-content" class="ui-content"><!---->
         <h1>Please filled up the form below to register</h1>
-        <form method="post" action="#"><!--register form. User can enter details to register-->
+        <form method="post" action="#" data-ajax="false"><!--register form. User can enter details to register-->
 			<input name="" required="required" placeholder="Enter first name" />
             <input name="" required="required" placeholder="Enter last name" />
             <input name="" required="required" placeholder="Enter username" />
@@ -4836,5 +4839,37 @@ pop up transparent box for feed back: question, enter feedback and view all feed
 </section>
 <!--start Galery link from my account-->
 
+
+ 
+    <script>
+        function onSuccess(data, status)
+        {
+            data = $.trim(data);
+            $("#notification").text(data);
+        }
+  
+        function onError(data, status)
+        {
+            // handle an error
+        }        
+  
+        $(document).ready(function() {
+            $("#submit").click(function(){
+  
+                var formData = $("#callAjaxForm").serialize();
+  
+                $.ajax({
+                    type: "POST",
+                    url: "callajax.php",
+                    cache: false,
+                    data: formData,
+                    success: onSuccess,
+                    error: onError
+                });
+  
+                return false;
+            });
+        });
+    </script>
 </body><!--End body of the html page-->
 </html><!--End html-->
